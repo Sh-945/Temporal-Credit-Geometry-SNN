@@ -93,24 +93,6 @@ bash reproduce/smoke_test.sh --source-only
 Set `DATA_ROOT` and omit `--source-only` for the real checkpoint replay. Set
 `SMOKE_DEVICE=cuda` to use a GPU; CPU is supported.
 
-## Reproducibility boundaries
-
-- Third-party datasets are not redistributed.
-- The archive contains the post-NPZ loader and exact frame shapes/splits, but
-  not the pinned raw-event-to-NPZ converter; this limitation is explicit in the
-  audit.
-- The manifest records 28 final checkpoint identities. One scientifically
-  identical, path-sanitized release binary is bundled for smoke replay; all 28
-  have sanitized config records and canonical SHA-256 identities, and no older
-  checkpoint is substituted.
-- The dataset archives and a portable NPZ content manifest are not bundled.
-  Full replay therefore requires a separately supplied matching pre-framed tree.
-- DVS H1/H2 raw-spatial gate cosine is available, but raw-spatial credit spectra
-  were not archived and are not claimed.
-- The source archive had no usable Git commit, so release provenance is based on
-  byte-level source/checkpoint/result manifests.
-- The repository does not synthesize the unsupported 32×32 DFA/BPTT basis
-  heatmap.
 
 See `REPRODUCIBILITY_AUDIT.md` for exact equations, reductions, shapes, source
 functions, numerical values, confirmed facts, and unresolved facts.
