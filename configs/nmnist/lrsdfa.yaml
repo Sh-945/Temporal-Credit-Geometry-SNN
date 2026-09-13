@@ -1,0 +1,45 @@
+experiment:
+  name: nmnist_3fc_lrsdfa
+  seed: 42
+data:
+  dataset: nmnist
+  root: ../data
+  time_steps: 30
+  batch_size: 128
+  num_workers: 0
+model:
+  architecture: fc
+  input_shape: [2, 34, 34]
+  hidden_features: [800, 800]
+  num_classes: 10
+neuron:
+  type: lif
+  decay: 0.5
+  threshold: 1.0
+  surrogate_beta: 10.0
+method:
+  name: lrsdfa
+  local_loss: proxy
+  temporal_mode: pointwise
+  local_weight: 1.0
+  feedback:
+    rank: 7
+    layer_ranks: null
+    rank_fraction: null
+    trainable: false
+    scale: 1.0
+    loss_weights: {alignment: 0.0, orthogonal: 0.0, hoyer: 0.0}
+    dynamic_rank:
+      enabled: false
+      warmup_epochs: 0
+      update_interval: 1
+      energy_threshold: 0.95
+      minimum_rank: 1
+training:
+  epochs: 100
+  learning_rate: 0.001
+  weight_decay: 0.0
+  gradient_clip: 1.0
+  lr_step: 60
+  lr_gamma: 0.1
+  output_dir: outputs/nmnist/lrsdfa_seed42

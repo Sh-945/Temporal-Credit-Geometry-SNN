@@ -1,0 +1,3882 @@
+{
+  "operation": "sanitized read-only extraction from archived checkpoint metadata",
+  "record_count": 28,
+  "records": [
+    {
+      "method": "SNN-DFA",
+      "seed": 20260830,
+      "stored_zero_based_epoch": 99,
+      "checkpoint_sha256": "b8f2c8c95c5944358405d35f2d38dcb293461fa1e8641e9e6cb29ab98e39a534",
+      "config": {
+        "experiment": {
+          "name": "experiment03_full_dense_seed20260830",
+          "seed": 20260830
+        },
+        "data": {
+          "dataset": "nmnist",
+          "root": "DATA_ROOT",
+          "time_steps": 30,
+          "batch_size": 128,
+          "num_workers": 0,
+          "pin_memory": true,
+          "persistent_workers": false
+        },
+        "model": {
+          "architecture": "fc",
+          "input_shape": [
+            2,
+            34,
+            34
+          ],
+          "hidden_features": [
+            800,
+            800,
+            800
+          ],
+          "num_classes": 10
+        },
+        "neuron": {
+          "type": "lif",
+          "decay": 0.5,
+          "threshold": 1,
+          "surrogate_beta": 10
+        },
+        "method": {
+          "name": "sdfa",
+          "local_loss": "proxy",
+          "temporal_mode": "pointwise",
+          "local_weight": 1,
+          "feedback": {
+            "scale": 1
+          }
+        },
+        "training": {
+          "epochs": 100,
+          "learning_rate": 0.001,
+          "weight_decay": 0,
+          "gradient_clip": 1,
+          "lr_step": 60,
+          "lr_gamma": 0.1,
+          "checkpoint_epochs": [
+            10,
+            25,
+            50,
+            75,
+            100
+          ],
+          "output_dir": "OUTPUT_DIR"
+        },
+        "experiment03": {
+          "split_seed": 20260830,
+          "calibration_seed": 20260831,
+          "validation_fraction": 0.1,
+          "calibration_size": 1024,
+          "diagnostic_probe_size": 512,
+          "energy_threshold": 0.95,
+          "pilot_seed": 20260830,
+          "pilot_epochs": 50,
+          "full_seeds": [
+            20260830,
+            20260831,
+            20260901
+          ],
+          "diagnostic_epochs": [
+            0,
+            10,
+            25,
+            50,
+            75,
+            100
+          ],
+          "early_failure": {
+            "loss_explosion_threshold": 1000,
+            "validation_accuracy_threshold": 0.9,
+            "consecutive_epochs": 5
+          },
+          "automatic_controls": {
+            "lrmatch_accuracy_gain_pp": 0.1,
+            "lrmatch_alignment_relative_gain": 0.2,
+            "normmatched_validation_margin_pp": 0.1,
+            "normmatched_alignment_relative_gain": 0.2,
+            "directional_control_accuracy_gain_pp": 0.1,
+            "directional_control_alignment_relative_gain": 0.1
+          },
+          "verdict": {
+            "accuracy_margin_pp": 0.1,
+            "alignment_relative_gain": 0.25,
+            "rank_relative_reduction": 0.15
+          }
+        }
+      },
+      "optimizer_parameter_groups": [
+        {
+          "lr": 0.0001,
+          "betas": [
+            0.9,
+            0.999
+          ],
+          "eps": 1e-08,
+          "weight_decay": 0,
+          "amsgrad": false,
+          "maximize": false,
+          "foreach": null,
+          "capturable": false,
+          "differentiable": false,
+          "fused": null,
+          "decoupled_weight_decay": false,
+          "initial_lr": 0.001,
+          "parameter_tensor_count": 8
+        }
+      ],
+      "scheduler_state": {
+        "step_size": 60,
+        "gamma": 0.1,
+        "base_lrs": [
+          0.001
+        ],
+        "last_epoch": 100,
+        "_step_count": 101,
+        "_is_initial": false,
+        "_get_lr_called_within_step": false,
+        "_last_lr": [
+          0.0001
+        ]
+      },
+      "checkpoint_keys": [
+        "format_version",
+        "epoch",
+        "model_state",
+        "feedback_state",
+        "optimizer_state",
+        "scheduler_state",
+        "config",
+        "metrics",
+        "active_ranks",
+        "rng_state"
+      ]
+    },
+    {
+      "method": "SNN-DFA",
+      "seed": 20260831,
+      "stored_zero_based_epoch": 99,
+      "checkpoint_sha256": "b486ef7efe077a5e11dbfa4148cfa5a8ec90514c3508227a9bf491bde631d58a",
+      "config": {
+        "experiment": {
+          "name": "experiment03_full_dense_seed20260831",
+          "seed": 20260831
+        },
+        "data": {
+          "dataset": "nmnist",
+          "root": "DATA_ROOT",
+          "time_steps": 30,
+          "batch_size": 128,
+          "num_workers": 0,
+          "pin_memory": true,
+          "persistent_workers": false
+        },
+        "model": {
+          "architecture": "fc",
+          "input_shape": [
+            2,
+            34,
+            34
+          ],
+          "hidden_features": [
+            800,
+            800,
+            800
+          ],
+          "num_classes": 10
+        },
+        "neuron": {
+          "type": "lif",
+          "decay": 0.5,
+          "threshold": 1,
+          "surrogate_beta": 10
+        },
+        "method": {
+          "name": "sdfa",
+          "local_loss": "proxy",
+          "temporal_mode": "pointwise",
+          "local_weight": 1,
+          "feedback": {
+            "scale": 1
+          }
+        },
+        "training": {
+          "epochs": 100,
+          "learning_rate": 0.001,
+          "weight_decay": 0,
+          "gradient_clip": 1,
+          "lr_step": 60,
+          "lr_gamma": 0.1,
+          "checkpoint_epochs": [
+            10,
+            25,
+            50,
+            75,
+            100
+          ],
+          "output_dir": "OUTPUT_DIR"
+        },
+        "experiment03": {
+          "split_seed": 20260830,
+          "calibration_seed": 20260831,
+          "validation_fraction": 0.1,
+          "calibration_size": 1024,
+          "diagnostic_probe_size": 512,
+          "energy_threshold": 0.95,
+          "pilot_seed": 20260830,
+          "pilot_epochs": 50,
+          "full_seeds": [
+            20260830,
+            20260831,
+            20260901
+          ],
+          "diagnostic_epochs": [
+            0,
+            10,
+            25,
+            50,
+            75,
+            100
+          ],
+          "early_failure": {
+            "loss_explosion_threshold": 1000,
+            "validation_accuracy_threshold": 0.9,
+            "consecutive_epochs": 5
+          },
+          "automatic_controls": {
+            "lrmatch_accuracy_gain_pp": 0.1,
+            "lrmatch_alignment_relative_gain": 0.2,
+            "normmatched_validation_margin_pp": 0.1,
+            "normmatched_alignment_relative_gain": 0.2,
+            "directional_control_accuracy_gain_pp": 0.1,
+            "directional_control_alignment_relative_gain": 0.1
+          },
+          "verdict": {
+            "accuracy_margin_pp": 0.1,
+            "alignment_relative_gain": 0.25,
+            "rank_relative_reduction": 0.15
+          }
+        }
+      },
+      "optimizer_parameter_groups": [
+        {
+          "lr": 0.0001,
+          "betas": [
+            0.9,
+            0.999
+          ],
+          "eps": 1e-08,
+          "weight_decay": 0,
+          "amsgrad": false,
+          "maximize": false,
+          "foreach": null,
+          "capturable": false,
+          "differentiable": false,
+          "fused": null,
+          "decoupled_weight_decay": false,
+          "initial_lr": 0.001,
+          "parameter_tensor_count": 8
+        }
+      ],
+      "scheduler_state": {
+        "step_size": 60,
+        "gamma": 0.1,
+        "base_lrs": [
+          0.001
+        ],
+        "last_epoch": 100,
+        "_step_count": 101,
+        "_is_initial": false,
+        "_get_lr_called_within_step": false,
+        "_last_lr": [
+          0.0001
+        ]
+      },
+      "checkpoint_keys": [
+        "format_version",
+        "epoch",
+        "model_state",
+        "feedback_state",
+        "optimizer_state",
+        "scheduler_state",
+        "config",
+        "metrics",
+        "active_ranks",
+        "rng_state"
+      ]
+    },
+    {
+      "method": "SNN-DFA",
+      "seed": 20260901,
+      "stored_zero_based_epoch": 99,
+      "checkpoint_sha256": "554990a77b2d2e8f6498d66d6182e5b9f7b8a61fd2c63c09d3ded066f44b5563",
+      "config": {
+        "experiment": {
+          "name": "experiment03_full_dense_seed20260901",
+          "seed": 20260901
+        },
+        "data": {
+          "dataset": "nmnist",
+          "root": "DATA_ROOT",
+          "time_steps": 30,
+          "batch_size": 128,
+          "num_workers": 0,
+          "pin_memory": true,
+          "persistent_workers": false
+        },
+        "model": {
+          "architecture": "fc",
+          "input_shape": [
+            2,
+            34,
+            34
+          ],
+          "hidden_features": [
+            800,
+            800,
+            800
+          ],
+          "num_classes": 10
+        },
+        "neuron": {
+          "type": "lif",
+          "decay": 0.5,
+          "threshold": 1,
+          "surrogate_beta": 10
+        },
+        "method": {
+          "name": "sdfa",
+          "local_loss": "proxy",
+          "temporal_mode": "pointwise",
+          "local_weight": 1,
+          "feedback": {
+            "scale": 1
+          }
+        },
+        "training": {
+          "epochs": 100,
+          "learning_rate": 0.001,
+          "weight_decay": 0,
+          "gradient_clip": 1,
+          "lr_step": 60,
+          "lr_gamma": 0.1,
+          "checkpoint_epochs": [
+            10,
+            25,
+            50,
+            75,
+            100
+          ],
+          "output_dir": "OUTPUT_DIR"
+        },
+        "experiment03": {
+          "split_seed": 20260830,
+          "calibration_seed": 20260831,
+          "validation_fraction": 0.1,
+          "calibration_size": 1024,
+          "diagnostic_probe_size": 512,
+          "energy_threshold": 0.95,
+          "pilot_seed": 20260830,
+          "pilot_epochs": 50,
+          "full_seeds": [
+            20260830,
+            20260831,
+            20260901
+          ],
+          "diagnostic_epochs": [
+            0,
+            10,
+            25,
+            50,
+            75,
+            100
+          ],
+          "early_failure": {
+            "loss_explosion_threshold": 1000,
+            "validation_accuracy_threshold": 0.9,
+            "consecutive_epochs": 5
+          },
+          "automatic_controls": {
+            "lrmatch_accuracy_gain_pp": 0.1,
+            "lrmatch_alignment_relative_gain": 0.2,
+            "normmatched_validation_margin_pp": 0.1,
+            "normmatched_alignment_relative_gain": 0.2,
+            "directional_control_accuracy_gain_pp": 0.1,
+            "directional_control_alignment_relative_gain": 0.1
+          },
+          "verdict": {
+            "accuracy_margin_pp": 0.1,
+            "alignment_relative_gain": 0.25,
+            "rank_relative_reduction": 0.15
+          }
+        }
+      },
+      "optimizer_parameter_groups": [
+        {
+          "lr": 0.0001,
+          "betas": [
+            0.9,
+            0.999
+          ],
+          "eps": 1e-08,
+          "weight_decay": 0,
+          "amsgrad": false,
+          "maximize": false,
+          "foreach": null,
+          "capturable": false,
+          "differentiable": false,
+          "fused": null,
+          "decoupled_weight_decay": false,
+          "initial_lr": 0.001,
+          "parameter_tensor_count": 8
+        }
+      ],
+      "scheduler_state": {
+        "step_size": 60,
+        "gamma": 0.1,
+        "base_lrs": [
+          0.001
+        ],
+        "last_epoch": 100,
+        "_step_count": 101,
+        "_is_initial": false,
+        "_get_lr_called_within_step": false,
+        "_last_lr": [
+          0.0001
+        ]
+      },
+      "checkpoint_keys": [
+        "format_version",
+        "epoch",
+        "model_state",
+        "feedback_state",
+        "optimizer_state",
+        "scheduler_state",
+        "config",
+        "metrics",
+        "active_ranks",
+        "rng_state"
+      ]
+    },
+    {
+      "method": "SNN-DFA",
+      "seed": 20260908,
+      "stored_zero_based_epoch": 99,
+      "checkpoint_sha256": "9aad88592135096912c2e9971ced9f74b63d546bdd69208e989abf481efd833e",
+      "config": {
+        "experiment": {
+          "name": "paper_v9_dfa_trained_20260908",
+          "seed": 20260908
+        },
+        "data": {
+          "dataset": "nmnist",
+          "root": "DATA_ROOT",
+          "time_steps": 30,
+          "batch_size": 128,
+          "num_workers": 0,
+          "pin_memory": true,
+          "persistent_workers": false
+        },
+        "model": {
+          "architecture": "fc",
+          "input_shape": [
+            2,
+            34,
+            34
+          ],
+          "hidden_features": [
+            800,
+            800,
+            800
+          ],
+          "num_classes": 10
+        },
+        "neuron": {
+          "type": "lif",
+          "decay": 0.5,
+          "threshold": 1,
+          "surrogate_beta": 10
+        },
+        "method": {
+          "name": "sdfa",
+          "local_loss": "proxy",
+          "temporal_mode": "pointwise",
+          "local_weight": 1,
+          "feedback": {
+            "scale": 1
+          }
+        },
+        "training": {
+          "epochs": 100,
+          "learning_rate": 0.001,
+          "weight_decay": 0,
+          "gradient_clip": 1,
+          "lr_step": 60,
+          "lr_gamma": 0.1,
+          "checkpoint_epochs": [
+            10,
+            25,
+            50,
+            75,
+            100
+          ],
+          "output_dir": "OUTPUT_DIR"
+        },
+        "experiment03": {
+          "split_seed": 20260830,
+          "probe_seed": 20260831,
+          "validation_fraction": 0.1,
+          "probe_size": 1024,
+          "diagnostic_epochs": [
+            0,
+            10,
+            25,
+            50,
+            75,
+            100
+          ],
+          "seeds": [
+            20260830,
+            20260831,
+            20260901
+          ]
+        },
+        "paper1": {
+          "gate_mode": "actual",
+          "model_kind": "snn"
+        }
+      },
+      "optimizer_parameter_groups": [
+        {
+          "lr": 0.0001,
+          "betas": [
+            0.9,
+            0.999
+          ],
+          "eps": 1e-08,
+          "weight_decay": 0,
+          "amsgrad": false,
+          "maximize": false,
+          "foreach": null,
+          "capturable": false,
+          "differentiable": false,
+          "fused": null,
+          "decoupled_weight_decay": false,
+          "initial_lr": 0.001,
+          "parameter_tensor_count": 8
+        }
+      ],
+      "scheduler_state": {
+        "step_size": 60,
+        "gamma": 0.1,
+        "base_lrs": [
+          0.001
+        ],
+        "last_epoch": 100,
+        "_step_count": 101,
+        "_is_initial": false,
+        "_get_lr_called_within_step": false,
+        "_last_lr": [
+          0.0001
+        ]
+      },
+      "checkpoint_keys": [
+        "format_version",
+        "epoch",
+        "model_state",
+        "feedback_state",
+        "optimizer_state",
+        "scheduler_state",
+        "config",
+        "metrics",
+        "active_ranks",
+        "rng_state"
+      ]
+    },
+    {
+      "method": "SNN-DFA",
+      "seed": 20260909,
+      "stored_zero_based_epoch": 99,
+      "checkpoint_sha256": "0800c9e1ee7b4cf64c5099e83f65ae2c8adb1bf072ccdaa45be9f1911ae9bad7",
+      "config": {
+        "experiment": {
+          "name": "paper_v9_dfa_trained_20260909",
+          "seed": 20260909
+        },
+        "data": {
+          "dataset": "nmnist",
+          "root": "DATA_ROOT",
+          "time_steps": 30,
+          "batch_size": 128,
+          "num_workers": 0,
+          "pin_memory": true,
+          "persistent_workers": false
+        },
+        "model": {
+          "architecture": "fc",
+          "input_shape": [
+            2,
+            34,
+            34
+          ],
+          "hidden_features": [
+            800,
+            800,
+            800
+          ],
+          "num_classes": 10
+        },
+        "neuron": {
+          "type": "lif",
+          "decay": 0.5,
+          "threshold": 1,
+          "surrogate_beta": 10
+        },
+        "method": {
+          "name": "sdfa",
+          "local_loss": "proxy",
+          "temporal_mode": "pointwise",
+          "local_weight": 1,
+          "feedback": {
+            "scale": 1
+          }
+        },
+        "training": {
+          "epochs": 100,
+          "learning_rate": 0.001,
+          "weight_decay": 0,
+          "gradient_clip": 1,
+          "lr_step": 60,
+          "lr_gamma": 0.1,
+          "checkpoint_epochs": [
+            10,
+            25,
+            50,
+            75,
+            100
+          ],
+          "output_dir": "OUTPUT_DIR"
+        },
+        "experiment03": {
+          "split_seed": 20260830,
+          "probe_seed": 20260831,
+          "validation_fraction": 0.1,
+          "probe_size": 1024,
+          "diagnostic_epochs": [
+            0,
+            10,
+            25,
+            50,
+            75,
+            100
+          ],
+          "seeds": [
+            20260830,
+            20260831,
+            20260901
+          ]
+        },
+        "paper1": {
+          "gate_mode": "actual",
+          "model_kind": "snn"
+        }
+      },
+      "optimizer_parameter_groups": [
+        {
+          "lr": 0.0001,
+          "betas": [
+            0.9,
+            0.999
+          ],
+          "eps": 1e-08,
+          "weight_decay": 0,
+          "amsgrad": false,
+          "maximize": false,
+          "foreach": null,
+          "capturable": false,
+          "differentiable": false,
+          "fused": null,
+          "decoupled_weight_decay": false,
+          "initial_lr": 0.001,
+          "parameter_tensor_count": 8
+        }
+      ],
+      "scheduler_state": {
+        "step_size": 60,
+        "gamma": 0.1,
+        "base_lrs": [
+          0.001
+        ],
+        "last_epoch": 100,
+        "_step_count": 101,
+        "_is_initial": false,
+        "_get_lr_called_within_step": false,
+        "_last_lr": [
+          0.0001
+        ]
+      },
+      "checkpoint_keys": [
+        "format_version",
+        "epoch",
+        "model_state",
+        "feedback_state",
+        "optimizer_state",
+        "scheduler_state",
+        "config",
+        "metrics",
+        "active_ranks",
+        "rng_state"
+      ]
+    },
+    {
+      "method": "matched SNN-BPTT",
+      "seed": 20260830,
+      "stored_zero_based_epoch": 99,
+      "checkpoint_sha256": "a0b1f2882ec75eaac0ffac0d00a6d8982401e9139ae70995d499e09e067c5b84",
+      "config": {
+        "experiment": {
+          "name": "experiment03_full_bptt_seed20260830",
+          "seed": 20260830
+        },
+        "data": {
+          "dataset": "nmnist",
+          "root": "DATA_ROOT",
+          "time_steps": 30,
+          "batch_size": 128,
+          "num_workers": 0,
+          "pin_memory": true,
+          "persistent_workers": false
+        },
+        "model": {
+          "architecture": "fc",
+          "input_shape": [
+            2,
+            34,
+            34
+          ],
+          "hidden_features": [
+            800,
+            800,
+            800
+          ],
+          "num_classes": 10
+        },
+        "neuron": {
+          "type": "lif",
+          "decay": 0.5,
+          "threshold": 1,
+          "surrogate_beta": 10
+        },
+        "method": {
+          "name": "bptt",
+          "local_loss": "proxy",
+          "temporal_mode": "pointwise",
+          "local_weight": 1,
+          "feedback": {
+            "scale": 1
+          }
+        },
+        "training": {
+          "epochs": 100,
+          "learning_rate": 0.001,
+          "weight_decay": 0,
+          "gradient_clip": 1,
+          "lr_step": 60,
+          "lr_gamma": 0.1,
+          "checkpoint_epochs": [
+            10,
+            25,
+            50,
+            75,
+            100
+          ],
+          "output_dir": "OUTPUT_DIR"
+        },
+        "experiment03": {
+          "split_seed": 20260830,
+          "calibration_seed": 20260831,
+          "validation_fraction": 0.1,
+          "calibration_size": 1024,
+          "diagnostic_probe_size": 512,
+          "energy_threshold": 0.95,
+          "pilot_seed": 20260830,
+          "pilot_epochs": 50,
+          "full_seeds": [
+            20260830,
+            20260831,
+            20260901
+          ],
+          "diagnostic_epochs": [
+            0,
+            10,
+            25,
+            50,
+            75,
+            100
+          ],
+          "early_failure": {
+            "loss_explosion_threshold": 1000,
+            "validation_accuracy_threshold": 0.9,
+            "consecutive_epochs": 5
+          },
+          "automatic_controls": {
+            "lrmatch_accuracy_gain_pp": 0.1,
+            "lrmatch_alignment_relative_gain": 0.2,
+            "normmatched_validation_margin_pp": 0.1,
+            "normmatched_alignment_relative_gain": 0.2,
+            "directional_control_accuracy_gain_pp": 0.1,
+            "directional_control_alignment_relative_gain": 0.1
+          },
+          "verdict": {
+            "accuracy_margin_pp": 0.1,
+            "alignment_relative_gain": 0.25,
+            "rank_relative_reduction": 0.15
+          }
+        }
+      },
+      "optimizer_parameter_groups": [
+        {
+          "lr": 0.0001,
+          "betas": [
+            0.9,
+            0.999
+          ],
+          "eps": 1e-08,
+          "weight_decay": 0,
+          "amsgrad": false,
+          "maximize": false,
+          "foreach": null,
+          "capturable": false,
+          "differentiable": false,
+          "fused": null,
+          "decoupled_weight_decay": false,
+          "initial_lr": 0.001,
+          "parameter_tensor_count": 8
+        }
+      ],
+      "scheduler_state": {
+        "step_size": 60,
+        "gamma": 0.1,
+        "base_lrs": [
+          0.001
+        ],
+        "last_epoch": 100,
+        "_step_count": 101,
+        "_is_initial": false,
+        "_get_lr_called_within_step": false,
+        "_last_lr": [
+          0.0001
+        ]
+      },
+      "checkpoint_keys": [
+        "format_version",
+        "epoch",
+        "model_state",
+        "feedback_state",
+        "optimizer_state",
+        "scheduler_state",
+        "config",
+        "metrics",
+        "active_ranks",
+        "rng_state"
+      ]
+    },
+    {
+      "method": "matched SNN-BPTT",
+      "seed": 20260831,
+      "stored_zero_based_epoch": 99,
+      "checkpoint_sha256": "357d3640f99b0cfbbb828f68ee6a43f64e1a763012803411748d5deacc093fb7",
+      "config": {
+        "experiment": {
+          "name": "experiment03_full_bptt_seed20260831",
+          "seed": 20260831
+        },
+        "data": {
+          "dataset": "nmnist",
+          "root": "DATA_ROOT",
+          "time_steps": 30,
+          "batch_size": 128,
+          "num_workers": 0,
+          "pin_memory": true,
+          "persistent_workers": false
+        },
+        "model": {
+          "architecture": "fc",
+          "input_shape": [
+            2,
+            34,
+            34
+          ],
+          "hidden_features": [
+            800,
+            800,
+            800
+          ],
+          "num_classes": 10
+        },
+        "neuron": {
+          "type": "lif",
+          "decay": 0.5,
+          "threshold": 1,
+          "surrogate_beta": 10
+        },
+        "method": {
+          "name": "bptt",
+          "local_loss": "proxy",
+          "temporal_mode": "pointwise",
+          "local_weight": 1,
+          "feedback": {
+            "scale": 1
+          }
+        },
+        "training": {
+          "epochs": 100,
+          "learning_rate": 0.001,
+          "weight_decay": 0,
+          "gradient_clip": 1,
+          "lr_step": 60,
+          "lr_gamma": 0.1,
+          "checkpoint_epochs": [
+            10,
+            25,
+            50,
+            75,
+            100
+          ],
+          "output_dir": "OUTPUT_DIR"
+        },
+        "experiment03": {
+          "split_seed": 20260830,
+          "calibration_seed": 20260831,
+          "validation_fraction": 0.1,
+          "calibration_size": 1024,
+          "diagnostic_probe_size": 512,
+          "energy_threshold": 0.95,
+          "pilot_seed": 20260830,
+          "pilot_epochs": 50,
+          "full_seeds": [
+            20260830,
+            20260831,
+            20260901
+          ],
+          "diagnostic_epochs": [
+            0,
+            10,
+            25,
+            50,
+            75,
+            100
+          ],
+          "early_failure": {
+            "loss_explosion_threshold": 1000,
+            "validation_accuracy_threshold": 0.9,
+            "consecutive_epochs": 5
+          },
+          "automatic_controls": {
+            "lrmatch_accuracy_gain_pp": 0.1,
+            "lrmatch_alignment_relative_gain": 0.2,
+            "normmatched_validation_margin_pp": 0.1,
+            "normmatched_alignment_relative_gain": 0.2,
+            "directional_control_accuracy_gain_pp": 0.1,
+            "directional_control_alignment_relative_gain": 0.1
+          },
+          "verdict": {
+            "accuracy_margin_pp": 0.1,
+            "alignment_relative_gain": 0.25,
+            "rank_relative_reduction": 0.15
+          }
+        }
+      },
+      "optimizer_parameter_groups": [
+        {
+          "lr": 0.0001,
+          "betas": [
+            0.9,
+            0.999
+          ],
+          "eps": 1e-08,
+          "weight_decay": 0,
+          "amsgrad": false,
+          "maximize": false,
+          "foreach": null,
+          "capturable": false,
+          "differentiable": false,
+          "fused": null,
+          "decoupled_weight_decay": false,
+          "initial_lr": 0.001,
+          "parameter_tensor_count": 8
+        }
+      ],
+      "scheduler_state": {
+        "step_size": 60,
+        "gamma": 0.1,
+        "base_lrs": [
+          0.001
+        ],
+        "last_epoch": 100,
+        "_step_count": 101,
+        "_is_initial": false,
+        "_get_lr_called_within_step": false,
+        "_last_lr": [
+          0.0001
+        ]
+      },
+      "checkpoint_keys": [
+        "format_version",
+        "epoch",
+        "model_state",
+        "feedback_state",
+        "optimizer_state",
+        "scheduler_state",
+        "config",
+        "metrics",
+        "active_ranks",
+        "rng_state"
+      ]
+    },
+    {
+      "method": "matched SNN-BPTT",
+      "seed": 20260901,
+      "stored_zero_based_epoch": 99,
+      "checkpoint_sha256": "e6fa6653b618112c29d0cb33a3a241b19ca29b81f1b30d540f6941d226efd493",
+      "config": {
+        "experiment": {
+          "name": "experiment03_full_bptt_seed20260901",
+          "seed": 20260901
+        },
+        "data": {
+          "dataset": "nmnist",
+          "root": "DATA_ROOT",
+          "time_steps": 30,
+          "batch_size": 128,
+          "num_workers": 0,
+          "pin_memory": true,
+          "persistent_workers": false
+        },
+        "model": {
+          "architecture": "fc",
+          "input_shape": [
+            2,
+            34,
+            34
+          ],
+          "hidden_features": [
+            800,
+            800,
+            800
+          ],
+          "num_classes": 10
+        },
+        "neuron": {
+          "type": "lif",
+          "decay": 0.5,
+          "threshold": 1,
+          "surrogate_beta": 10
+        },
+        "method": {
+          "name": "bptt",
+          "local_loss": "proxy",
+          "temporal_mode": "pointwise",
+          "local_weight": 1,
+          "feedback": {
+            "scale": 1
+          }
+        },
+        "training": {
+          "epochs": 100,
+          "learning_rate": 0.001,
+          "weight_decay": 0,
+          "gradient_clip": 1,
+          "lr_step": 60,
+          "lr_gamma": 0.1,
+          "checkpoint_epochs": [
+            10,
+            25,
+            50,
+            75,
+            100
+          ],
+          "output_dir": "OUTPUT_DIR"
+        },
+        "experiment03": {
+          "split_seed": 20260830,
+          "calibration_seed": 20260831,
+          "validation_fraction": 0.1,
+          "calibration_size": 1024,
+          "diagnostic_probe_size": 512,
+          "energy_threshold": 0.95,
+          "pilot_seed": 20260830,
+          "pilot_epochs": 50,
+          "full_seeds": [
+            20260830,
+            20260831,
+            20260901
+          ],
+          "diagnostic_epochs": [
+            0,
+            10,
+            25,
+            50,
+            75,
+            100
+          ],
+          "early_failure": {
+            "loss_explosion_threshold": 1000,
+            "validation_accuracy_threshold": 0.9,
+            "consecutive_epochs": 5
+          },
+          "automatic_controls": {
+            "lrmatch_accuracy_gain_pp": 0.1,
+            "lrmatch_alignment_relative_gain": 0.2,
+            "normmatched_validation_margin_pp": 0.1,
+            "normmatched_alignment_relative_gain": 0.2,
+            "directional_control_accuracy_gain_pp": 0.1,
+            "directional_control_alignment_relative_gain": 0.1
+          },
+          "verdict": {
+            "accuracy_margin_pp": 0.1,
+            "alignment_relative_gain": 0.25,
+            "rank_relative_reduction": 0.15
+          }
+        }
+      },
+      "optimizer_parameter_groups": [
+        {
+          "lr": 0.0001,
+          "betas": [
+            0.9,
+            0.999
+          ],
+          "eps": 1e-08,
+          "weight_decay": 0,
+          "amsgrad": false,
+          "maximize": false,
+          "foreach": null,
+          "capturable": false,
+          "differentiable": false,
+          "fused": null,
+          "decoupled_weight_decay": false,
+          "initial_lr": 0.001,
+          "parameter_tensor_count": 8
+        }
+      ],
+      "scheduler_state": {
+        "step_size": 60,
+        "gamma": 0.1,
+        "base_lrs": [
+          0.001
+        ],
+        "last_epoch": 100,
+        "_step_count": 101,
+        "_is_initial": false,
+        "_get_lr_called_within_step": false,
+        "_last_lr": [
+          0.0001
+        ]
+      },
+      "checkpoint_keys": [
+        "format_version",
+        "epoch",
+        "model_state",
+        "feedback_state",
+        "optimizer_state",
+        "scheduler_state",
+        "config",
+        "metrics",
+        "active_ranks",
+        "rng_state"
+      ]
+    },
+    {
+      "method": "matched SNN-BPTT",
+      "seed": 20260908,
+      "stored_zero_based_epoch": 99,
+      "checkpoint_sha256": "da788649d6b999c28f343f26c74881473c1d5361ccde354e476bd8389f242354",
+      "config": {
+        "experiment": {
+          "name": "paper_v9_bptt_trained_20260908",
+          "seed": 20260908
+        },
+        "data": {
+          "dataset": "nmnist",
+          "root": "DATA_ROOT",
+          "time_steps": 30,
+          "batch_size": 128,
+          "num_workers": 0,
+          "pin_memory": true,
+          "persistent_workers": false
+        },
+        "model": {
+          "architecture": "fc",
+          "input_shape": [
+            2,
+            34,
+            34
+          ],
+          "hidden_features": [
+            800,
+            800,
+            800
+          ],
+          "num_classes": 10
+        },
+        "neuron": {
+          "type": "lif",
+          "decay": 0.5,
+          "threshold": 1,
+          "surrogate_beta": 10
+        },
+        "method": {
+          "name": "bptt",
+          "local_loss": "proxy",
+          "temporal_mode": "pointwise",
+          "local_weight": 1,
+          "feedback": {
+            "scale": 1
+          }
+        },
+        "training": {
+          "epochs": 100,
+          "learning_rate": 0.001,
+          "weight_decay": 0,
+          "gradient_clip": 1,
+          "lr_step": 60,
+          "lr_gamma": 0.1,
+          "checkpoint_epochs": [
+            10,
+            25,
+            50,
+            75,
+            100
+          ],
+          "output_dir": "OUTPUT_DIR"
+        },
+        "experiment03": {
+          "split_seed": 20260830,
+          "probe_seed": 20260831,
+          "validation_fraction": 0.1,
+          "probe_size": 1024,
+          "diagnostic_epochs": [
+            0,
+            10,
+            25,
+            50,
+            75,
+            100
+          ],
+          "seeds": [
+            20260830,
+            20260831,
+            20260901
+          ]
+        },
+        "paper1": {
+          "gate_mode": "actual",
+          "model_kind": "snn"
+        }
+      },
+      "optimizer_parameter_groups": [
+        {
+          "lr": 0.0001,
+          "betas": [
+            0.9,
+            0.999
+          ],
+          "eps": 1e-08,
+          "weight_decay": 0,
+          "amsgrad": false,
+          "maximize": false,
+          "foreach": null,
+          "capturable": false,
+          "differentiable": false,
+          "fused": null,
+          "decoupled_weight_decay": false,
+          "initial_lr": 0.001,
+          "parameter_tensor_count": 8
+        }
+      ],
+      "scheduler_state": {
+        "step_size": 60,
+        "gamma": 0.1,
+        "base_lrs": [
+          0.001
+        ],
+        "last_epoch": 100,
+        "_step_count": 101,
+        "_is_initial": false,
+        "_get_lr_called_within_step": false,
+        "_last_lr": [
+          0.0001
+        ]
+      },
+      "checkpoint_keys": [
+        "format_version",
+        "epoch",
+        "model_state",
+        "feedback_state",
+        "optimizer_state",
+        "scheduler_state",
+        "config",
+        "metrics",
+        "active_ranks",
+        "rng_state"
+      ]
+    },
+    {
+      "method": "matched SNN-BPTT",
+      "seed": 20260909,
+      "stored_zero_based_epoch": 99,
+      "checkpoint_sha256": "f9dc34813fda3e71c51cef44b549d13de3c75bc85a692aab5d81bf6e2e52a92e",
+      "config": {
+        "experiment": {
+          "name": "paper_v9_bptt_trained_20260909",
+          "seed": 20260909
+        },
+        "data": {
+          "dataset": "nmnist",
+          "root": "DATA_ROOT",
+          "time_steps": 30,
+          "batch_size": 128,
+          "num_workers": 0,
+          "pin_memory": true,
+          "persistent_workers": false
+        },
+        "model": {
+          "architecture": "fc",
+          "input_shape": [
+            2,
+            34,
+            34
+          ],
+          "hidden_features": [
+            800,
+            800,
+            800
+          ],
+          "num_classes": 10
+        },
+        "neuron": {
+          "type": "lif",
+          "decay": 0.5,
+          "threshold": 1,
+          "surrogate_beta": 10
+        },
+        "method": {
+          "name": "bptt",
+          "local_loss": "proxy",
+          "temporal_mode": "pointwise",
+          "local_weight": 1,
+          "feedback": {
+            "scale": 1
+          }
+        },
+        "training": {
+          "epochs": 100,
+          "learning_rate": 0.001,
+          "weight_decay": 0,
+          "gradient_clip": 1,
+          "lr_step": 60,
+          "lr_gamma": 0.1,
+          "checkpoint_epochs": [
+            10,
+            25,
+            50,
+            75,
+            100
+          ],
+          "output_dir": "OUTPUT_DIR"
+        },
+        "experiment03": {
+          "split_seed": 20260830,
+          "probe_seed": 20260831,
+          "validation_fraction": 0.1,
+          "probe_size": 1024,
+          "diagnostic_epochs": [
+            0,
+            10,
+            25,
+            50,
+            75,
+            100
+          ],
+          "seeds": [
+            20260830,
+            20260831,
+            20260901
+          ]
+        },
+        "paper1": {
+          "gate_mode": "actual",
+          "model_kind": "snn"
+        }
+      },
+      "optimizer_parameter_groups": [
+        {
+          "lr": 0.0001,
+          "betas": [
+            0.9,
+            0.999
+          ],
+          "eps": 1e-08,
+          "weight_decay": 0,
+          "amsgrad": false,
+          "maximize": false,
+          "foreach": null,
+          "capturable": false,
+          "differentiable": false,
+          "fused": null,
+          "decoupled_weight_decay": false,
+          "initial_lr": 0.001,
+          "parameter_tensor_count": 8
+        }
+      ],
+      "scheduler_state": {
+        "step_size": 60,
+        "gamma": 0.1,
+        "base_lrs": [
+          0.001
+        ],
+        "last_epoch": 100,
+        "_step_count": 101,
+        "_is_initial": false,
+        "_get_lr_called_within_step": false,
+        "_last_lr": [
+          0.0001
+        ]
+      },
+      "checkpoint_keys": [
+        "format_version",
+        "epoch",
+        "model_state",
+        "feedback_state",
+        "optimizer_state",
+        "scheduler_state",
+        "config",
+        "metrics",
+        "active_ranks",
+        "rng_state"
+      ]
+    },
+    {
+      "method": "temporal ANN-DFA",
+      "seed": 20260830,
+      "stored_zero_based_epoch": 99,
+      "checkpoint_sha256": "e9da049cb3b321aa4f5700c71788e8d685b721f654fbafc0fe94502dde8dcc50",
+      "config": {
+        "experiment": {
+          "name": "paper1_temporal_ann_seed20260830",
+          "seed": 20260830
+        },
+        "data": {
+          "dataset": "nmnist",
+          "root": "DATA_ROOT",
+          "time_steps": 30,
+          "batch_size": 128,
+          "num_workers": 0,
+          "pin_memory": true,
+          "persistent_workers": false
+        },
+        "model": {
+          "architecture": "fc",
+          "input_shape": [
+            2,
+            34,
+            34
+          ],
+          "hidden_features": [
+            800,
+            800,
+            800
+          ],
+          "num_classes": 10
+        },
+        "neuron": {
+          "type": "lif",
+          "decay": 0.5,
+          "threshold": 1,
+          "surrogate_beta": 10
+        },
+        "method": {
+          "name": "sdfa",
+          "local_loss": "proxy",
+          "temporal_mode": "pointwise",
+          "local_weight": 1,
+          "feedback": {
+            "scale": 1
+          }
+        },
+        "training": {
+          "epochs": 100,
+          "learning_rate": 0.001,
+          "weight_decay": 0,
+          "gradient_clip": 1,
+          "lr_step": 60,
+          "lr_gamma": 0.1,
+          "checkpoint_epochs": [
+            10,
+            25,
+            50,
+            75,
+            100
+          ],
+          "output_dir": "OUTPUT_DIR"
+        },
+        "experiment03": {
+          "split_seed": 20260830,
+          "probe_seed": 20260831,
+          "validation_fraction": 0.1,
+          "probe_size": 1024,
+          "diagnostic_epochs": [
+            0,
+            10,
+            25,
+            50,
+            75,
+            100
+          ],
+          "seeds": [
+            20260830,
+            20260831,
+            20260901
+          ]
+        },
+        "paper1": {
+          "model_kind": "temporal_ann"
+        }
+      },
+      "optimizer_parameter_groups": [
+        {
+          "lr": 0.0001,
+          "betas": [
+            0.9,
+            0.999
+          ],
+          "eps": 1e-08,
+          "weight_decay": 0,
+          "amsgrad": false,
+          "maximize": false,
+          "foreach": null,
+          "capturable": false,
+          "differentiable": false,
+          "fused": null,
+          "decoupled_weight_decay": false,
+          "initial_lr": 0.001,
+          "parameter_tensor_count": 8
+        }
+      ],
+      "scheduler_state": {
+        "step_size": 60,
+        "gamma": 0.1,
+        "base_lrs": [
+          0.001
+        ],
+        "last_epoch": 100,
+        "_step_count": 101,
+        "_is_initial": false,
+        "_get_lr_called_within_step": false,
+        "_last_lr": [
+          0.0001
+        ]
+      },
+      "checkpoint_keys": [
+        "format_version",
+        "epoch",
+        "model_state",
+        "feedback_state",
+        "optimizer_state",
+        "scheduler_state",
+        "config",
+        "metrics",
+        "active_ranks",
+        "rng_state"
+      ]
+    },
+    {
+      "method": "temporal ANN-DFA",
+      "seed": 20260831,
+      "stored_zero_based_epoch": 99,
+      "checkpoint_sha256": "582eaf2e63392b550e7f2d3208dda5e5757d7501c5ad43b98913f4a243bac29c",
+      "config": {
+        "experiment": {
+          "name": "paper1_temporal_ann_seed20260831",
+          "seed": 20260831
+        },
+        "data": {
+          "dataset": "nmnist",
+          "root": "DATA_ROOT",
+          "time_steps": 30,
+          "batch_size": 128,
+          "num_workers": 0,
+          "pin_memory": true,
+          "persistent_workers": false
+        },
+        "model": {
+          "architecture": "fc",
+          "input_shape": [
+            2,
+            34,
+            34
+          ],
+          "hidden_features": [
+            800,
+            800,
+            800
+          ],
+          "num_classes": 10
+        },
+        "neuron": {
+          "type": "lif",
+          "decay": 0.5,
+          "threshold": 1,
+          "surrogate_beta": 10
+        },
+        "method": {
+          "name": "sdfa",
+          "local_loss": "proxy",
+          "temporal_mode": "pointwise",
+          "local_weight": 1,
+          "feedback": {
+            "scale": 1
+          }
+        },
+        "training": {
+          "epochs": 100,
+          "learning_rate": 0.001,
+          "weight_decay": 0,
+          "gradient_clip": 1,
+          "lr_step": 60,
+          "lr_gamma": 0.1,
+          "checkpoint_epochs": [
+            10,
+            25,
+            50,
+            75,
+            100
+          ],
+          "output_dir": "OUTPUT_DIR"
+        },
+        "experiment03": {
+          "split_seed": 20260830,
+          "probe_seed": 20260831,
+          "validation_fraction": 0.1,
+          "probe_size": 1024,
+          "diagnostic_epochs": [
+            0,
+            10,
+            25,
+            50,
+            75,
+            100
+          ],
+          "seeds": [
+            20260830,
+            20260831,
+            20260901
+          ]
+        },
+        "paper1": {
+          "model_kind": "temporal_ann"
+        }
+      },
+      "optimizer_parameter_groups": [
+        {
+          "lr": 0.0001,
+          "betas": [
+            0.9,
+            0.999
+          ],
+          "eps": 1e-08,
+          "weight_decay": 0,
+          "amsgrad": false,
+          "maximize": false,
+          "foreach": null,
+          "capturable": false,
+          "differentiable": false,
+          "fused": null,
+          "decoupled_weight_decay": false,
+          "initial_lr": 0.001,
+          "parameter_tensor_count": 8
+        }
+      ],
+      "scheduler_state": {
+        "step_size": 60,
+        "gamma": 0.1,
+        "base_lrs": [
+          0.001
+        ],
+        "last_epoch": 100,
+        "_step_count": 101,
+        "_is_initial": false,
+        "_get_lr_called_within_step": false,
+        "_last_lr": [
+          0.0001
+        ]
+      },
+      "checkpoint_keys": [
+        "format_version",
+        "epoch",
+        "model_state",
+        "feedback_state",
+        "optimizer_state",
+        "scheduler_state",
+        "config",
+        "metrics",
+        "active_ranks",
+        "rng_state"
+      ]
+    },
+    {
+      "method": "temporal ANN-DFA",
+      "seed": 20260901,
+      "stored_zero_based_epoch": 99,
+      "checkpoint_sha256": "a6a1094ccb95d20bfdabf58320ff0c4ae9650d4ddb8667a1533d5db24a016a56",
+      "config": {
+        "experiment": {
+          "name": "paper1_temporal_ann_seed20260901",
+          "seed": 20260901
+        },
+        "data": {
+          "dataset": "nmnist",
+          "root": "DATA_ROOT",
+          "time_steps": 30,
+          "batch_size": 128,
+          "num_workers": 0,
+          "pin_memory": true,
+          "persistent_workers": false
+        },
+        "model": {
+          "architecture": "fc",
+          "input_shape": [
+            2,
+            34,
+            34
+          ],
+          "hidden_features": [
+            800,
+            800,
+            800
+          ],
+          "num_classes": 10
+        },
+        "neuron": {
+          "type": "lif",
+          "decay": 0.5,
+          "threshold": 1,
+          "surrogate_beta": 10
+        },
+        "method": {
+          "name": "sdfa",
+          "local_loss": "proxy",
+          "temporal_mode": "pointwise",
+          "local_weight": 1,
+          "feedback": {
+            "scale": 1
+          }
+        },
+        "training": {
+          "epochs": 100,
+          "learning_rate": 0.001,
+          "weight_decay": 0,
+          "gradient_clip": 1,
+          "lr_step": 60,
+          "lr_gamma": 0.1,
+          "checkpoint_epochs": [
+            10,
+            25,
+            50,
+            75,
+            100
+          ],
+          "output_dir": "OUTPUT_DIR"
+        },
+        "experiment03": {
+          "split_seed": 20260830,
+          "probe_seed": 20260831,
+          "validation_fraction": 0.1,
+          "probe_size": 1024,
+          "diagnostic_epochs": [
+            0,
+            10,
+            25,
+            50,
+            75,
+            100
+          ],
+          "seeds": [
+            20260830,
+            20260831,
+            20260901
+          ]
+        },
+        "paper1": {
+          "model_kind": "temporal_ann"
+        }
+      },
+      "optimizer_parameter_groups": [
+        {
+          "lr": 0.0001,
+          "betas": [
+            0.9,
+            0.999
+          ],
+          "eps": 1e-08,
+          "weight_decay": 0,
+          "amsgrad": false,
+          "maximize": false,
+          "foreach": null,
+          "capturable": false,
+          "differentiable": false,
+          "fused": null,
+          "decoupled_weight_decay": false,
+          "initial_lr": 0.001,
+          "parameter_tensor_count": 8
+        }
+      ],
+      "scheduler_state": {
+        "step_size": 60,
+        "gamma": 0.1,
+        "base_lrs": [
+          0.001
+        ],
+        "last_epoch": 100,
+        "_step_count": 101,
+        "_is_initial": false,
+        "_get_lr_called_within_step": false,
+        "_last_lr": [
+          0.0001
+        ]
+      },
+      "checkpoint_keys": [
+        "format_version",
+        "epoch",
+        "model_state",
+        "feedback_state",
+        "optimizer_state",
+        "scheduler_state",
+        "config",
+        "metrics",
+        "active_ranks",
+        "rng_state"
+      ]
+    },
+    {
+      "method": "temporal ANN-DFA",
+      "seed": 20260908,
+      "stored_zero_based_epoch": 99,
+      "checkpoint_sha256": "072604c237c2e886f379d46bf801b4f1fde4a069ae7dd08428aa34fc079c1ecb",
+      "config": {
+        "experiment": {
+          "name": "paper_v9_temporal_ann_dfa_20260908",
+          "seed": 20260908
+        },
+        "data": {
+          "dataset": "nmnist",
+          "root": "DATA_ROOT",
+          "time_steps": 30,
+          "batch_size": 128,
+          "num_workers": 0,
+          "pin_memory": true,
+          "persistent_workers": false
+        },
+        "model": {
+          "architecture": "fc",
+          "input_shape": [
+            2,
+            34,
+            34
+          ],
+          "hidden_features": [
+            800,
+            800,
+            800
+          ],
+          "num_classes": 10
+        },
+        "neuron": {
+          "type": "lif",
+          "decay": 0.5,
+          "threshold": 1,
+          "surrogate_beta": 10
+        },
+        "method": {
+          "name": "sdfa",
+          "local_loss": "proxy",
+          "temporal_mode": "pointwise",
+          "local_weight": 1,
+          "feedback": {
+            "scale": 1
+          }
+        },
+        "training": {
+          "epochs": 100,
+          "learning_rate": 0.001,
+          "weight_decay": 0,
+          "gradient_clip": 1,
+          "lr_step": 60,
+          "lr_gamma": 0.1,
+          "checkpoint_epochs": [
+            10,
+            25,
+            50,
+            75,
+            100
+          ],
+          "output_dir": "OUTPUT_DIR"
+        },
+        "experiment03": {
+          "split_seed": 20260830,
+          "probe_seed": 20260831,
+          "validation_fraction": 0.1,
+          "probe_size": 1024,
+          "diagnostic_epochs": [
+            0,
+            10,
+            25,
+            50,
+            75,
+            100
+          ],
+          "seeds": [
+            20260830,
+            20260831,
+            20260901
+          ]
+        },
+        "paper1": {
+          "gate_mode": "actual",
+          "model_kind": "temporal_ann"
+        }
+      },
+      "optimizer_parameter_groups": [
+        {
+          "lr": 0.0001,
+          "betas": [
+            0.9,
+            0.999
+          ],
+          "eps": 1e-08,
+          "weight_decay": 0,
+          "amsgrad": false,
+          "maximize": false,
+          "foreach": null,
+          "capturable": false,
+          "differentiable": false,
+          "fused": null,
+          "decoupled_weight_decay": false,
+          "initial_lr": 0.001,
+          "parameter_tensor_count": 8
+        }
+      ],
+      "scheduler_state": {
+        "step_size": 60,
+        "gamma": 0.1,
+        "base_lrs": [
+          0.001
+        ],
+        "last_epoch": 100,
+        "_step_count": 101,
+        "_is_initial": false,
+        "_get_lr_called_within_step": false,
+        "_last_lr": [
+          0.0001
+        ]
+      },
+      "checkpoint_keys": [
+        "format_version",
+        "epoch",
+        "model_state",
+        "feedback_state",
+        "optimizer_state",
+        "scheduler_state",
+        "config",
+        "metrics",
+        "active_ranks",
+        "rng_state"
+      ]
+    },
+    {
+      "method": "temporal ANN-DFA",
+      "seed": 20260909,
+      "stored_zero_based_epoch": 99,
+      "checkpoint_sha256": "81fd5ae699ebe89c5d21e5b3a8f967322f1c97a6d1f3042a2eccfcdc6da0dd0e",
+      "config": {
+        "experiment": {
+          "name": "paper_v9_temporal_ann_dfa_20260909",
+          "seed": 20260909
+        },
+        "data": {
+          "dataset": "nmnist",
+          "root": "DATA_ROOT",
+          "time_steps": 30,
+          "batch_size": 128,
+          "num_workers": 0,
+          "pin_memory": true,
+          "persistent_workers": false
+        },
+        "model": {
+          "architecture": "fc",
+          "input_shape": [
+            2,
+            34,
+            34
+          ],
+          "hidden_features": [
+            800,
+            800,
+            800
+          ],
+          "num_classes": 10
+        },
+        "neuron": {
+          "type": "lif",
+          "decay": 0.5,
+          "threshold": 1,
+          "surrogate_beta": 10
+        },
+        "method": {
+          "name": "sdfa",
+          "local_loss": "proxy",
+          "temporal_mode": "pointwise",
+          "local_weight": 1,
+          "feedback": {
+            "scale": 1
+          }
+        },
+        "training": {
+          "epochs": 100,
+          "learning_rate": 0.001,
+          "weight_decay": 0,
+          "gradient_clip": 1,
+          "lr_step": 60,
+          "lr_gamma": 0.1,
+          "checkpoint_epochs": [
+            10,
+            25,
+            50,
+            75,
+            100
+          ],
+          "output_dir": "OUTPUT_DIR"
+        },
+        "experiment03": {
+          "split_seed": 20260830,
+          "probe_seed": 20260831,
+          "validation_fraction": 0.1,
+          "probe_size": 1024,
+          "diagnostic_epochs": [
+            0,
+            10,
+            25,
+            50,
+            75,
+            100
+          ],
+          "seeds": [
+            20260830,
+            20260831,
+            20260901
+          ]
+        },
+        "paper1": {
+          "gate_mode": "actual",
+          "model_kind": "temporal_ann"
+        }
+      },
+      "optimizer_parameter_groups": [
+        {
+          "lr": 0.0001,
+          "betas": [
+            0.9,
+            0.999
+          ],
+          "eps": 1e-08,
+          "weight_decay": 0,
+          "amsgrad": false,
+          "maximize": false,
+          "foreach": null,
+          "capturable": false,
+          "differentiable": false,
+          "fused": null,
+          "decoupled_weight_decay": false,
+          "initial_lr": 0.001,
+          "parameter_tensor_count": 8
+        }
+      ],
+      "scheduler_state": {
+        "step_size": 60,
+        "gamma": 0.1,
+        "base_lrs": [
+          0.001
+        ],
+        "last_epoch": 100,
+        "_step_count": 101,
+        "_is_initial": false,
+        "_get_lr_called_within_step": false,
+        "_last_lr": [
+          0.0001
+        ]
+      },
+      "checkpoint_keys": [
+        "format_version",
+        "epoch",
+        "model_state",
+        "feedback_state",
+        "optimizer_state",
+        "scheduler_state",
+        "config",
+        "metrics",
+        "active_ranks",
+        "rng_state"
+      ]
+    },
+    {
+      "method": "MeanGate",
+      "seed": 20260830,
+      "stored_zero_based_epoch": 99,
+      "checkpoint_sha256": "01dd13b84fc1529257bc4f2248e91b56196e7f5c2918f6a8c2d3f135bfbb8def",
+      "config": {
+        "experiment": {
+          "name": "paper1_mean_gate_seed20260830",
+          "seed": 20260830
+        },
+        "data": {
+          "dataset": "nmnist",
+          "root": "DATA_ROOT",
+          "time_steps": 30,
+          "batch_size": 128,
+          "num_workers": 0,
+          "pin_memory": true,
+          "persistent_workers": false
+        },
+        "model": {
+          "architecture": "fc",
+          "input_shape": [
+            2,
+            34,
+            34
+          ],
+          "hidden_features": [
+            800,
+            800,
+            800
+          ],
+          "num_classes": 10
+        },
+        "neuron": {
+          "type": "lif",
+          "decay": 0.5,
+          "threshold": 1,
+          "surrogate_beta": 10
+        },
+        "method": {
+          "name": "sdfa",
+          "local_loss": "proxy",
+          "temporal_mode": "pointwise",
+          "local_weight": 1,
+          "feedback": {
+            "scale": 1
+          }
+        },
+        "training": {
+          "epochs": 100,
+          "learning_rate": 0.001,
+          "weight_decay": 0,
+          "gradient_clip": 1,
+          "lr_step": 60,
+          "lr_gamma": 0.1,
+          "checkpoint_epochs": [
+            10,
+            25,
+            50,
+            75,
+            100
+          ],
+          "output_dir": "OUTPUT_DIR"
+        },
+        "experiment03": {
+          "split_seed": 20260830,
+          "probe_seed": 20260831,
+          "validation_fraction": 0.1,
+          "probe_size": 1024,
+          "diagnostic_epochs": [
+            0,
+            10,
+            25,
+            50,
+            75,
+            100
+          ],
+          "seeds": [
+            20260830,
+            20260831,
+            20260901
+          ]
+        },
+        "paper1": {
+          "gate_mode": "temporal_mean_normmatched"
+        }
+      },
+      "optimizer_parameter_groups": [
+        {
+          "lr": 0.0001,
+          "betas": [
+            0.9,
+            0.999
+          ],
+          "eps": 1e-08,
+          "weight_decay": 0,
+          "amsgrad": false,
+          "maximize": false,
+          "foreach": null,
+          "capturable": false,
+          "differentiable": false,
+          "fused": null,
+          "decoupled_weight_decay": false,
+          "initial_lr": 0.001,
+          "parameter_tensor_count": 8
+        }
+      ],
+      "scheduler_state": {
+        "step_size": 60,
+        "gamma": 0.1,
+        "base_lrs": [
+          0.001
+        ],
+        "last_epoch": 100,
+        "_step_count": 101,
+        "_is_initial": false,
+        "_get_lr_called_within_step": false,
+        "_last_lr": [
+          0.0001
+        ]
+      },
+      "checkpoint_keys": [
+        "format_version",
+        "epoch",
+        "model_state",
+        "feedback_state",
+        "optimizer_state",
+        "scheduler_state",
+        "config",
+        "metrics",
+        "active_ranks",
+        "rng_state"
+      ]
+    },
+    {
+      "method": "MeanGate",
+      "seed": 20260831,
+      "stored_zero_based_epoch": 99,
+      "checkpoint_sha256": "e3828627eaa748905bfcf0d20803a71acae440a27dee9ecaee8e4a17360ffc40",
+      "config": {
+        "experiment": {
+          "name": "paper1_mean_gate_seed20260831",
+          "seed": 20260831
+        },
+        "data": {
+          "dataset": "nmnist",
+          "root": "DATA_ROOT",
+          "time_steps": 30,
+          "batch_size": 128,
+          "num_workers": 0,
+          "pin_memory": true,
+          "persistent_workers": false
+        },
+        "model": {
+          "architecture": "fc",
+          "input_shape": [
+            2,
+            34,
+            34
+          ],
+          "hidden_features": [
+            800,
+            800,
+            800
+          ],
+          "num_classes": 10
+        },
+        "neuron": {
+          "type": "lif",
+          "decay": 0.5,
+          "threshold": 1,
+          "surrogate_beta": 10
+        },
+        "method": {
+          "name": "sdfa",
+          "local_loss": "proxy",
+          "temporal_mode": "pointwise",
+          "local_weight": 1,
+          "feedback": {
+            "scale": 1
+          }
+        },
+        "training": {
+          "epochs": 100,
+          "learning_rate": 0.001,
+          "weight_decay": 0,
+          "gradient_clip": 1,
+          "lr_step": 60,
+          "lr_gamma": 0.1,
+          "checkpoint_epochs": [
+            10,
+            25,
+            50,
+            75,
+            100
+          ],
+          "output_dir": "OUTPUT_DIR"
+        },
+        "experiment03": {
+          "split_seed": 20260830,
+          "probe_seed": 20260831,
+          "validation_fraction": 0.1,
+          "probe_size": 1024,
+          "diagnostic_epochs": [
+            0,
+            10,
+            25,
+            50,
+            75,
+            100
+          ],
+          "seeds": [
+            20260830,
+            20260831,
+            20260901
+          ]
+        },
+        "paper1": {
+          "gate_mode": "temporal_mean_normmatched"
+        }
+      },
+      "optimizer_parameter_groups": [
+        {
+          "lr": 0.0001,
+          "betas": [
+            0.9,
+            0.999
+          ],
+          "eps": 1e-08,
+          "weight_decay": 0,
+          "amsgrad": false,
+          "maximize": false,
+          "foreach": null,
+          "capturable": false,
+          "differentiable": false,
+          "fused": null,
+          "decoupled_weight_decay": false,
+          "initial_lr": 0.001,
+          "parameter_tensor_count": 8
+        }
+      ],
+      "scheduler_state": {
+        "step_size": 60,
+        "gamma": 0.1,
+        "base_lrs": [
+          0.001
+        ],
+        "last_epoch": 100,
+        "_step_count": 101,
+        "_is_initial": false,
+        "_get_lr_called_within_step": false,
+        "_last_lr": [
+          0.0001
+        ]
+      },
+      "checkpoint_keys": [
+        "format_version",
+        "epoch",
+        "model_state",
+        "feedback_state",
+        "optimizer_state",
+        "scheduler_state",
+        "config",
+        "metrics",
+        "active_ranks",
+        "rng_state"
+      ]
+    },
+    {
+      "method": "MeanGate",
+      "seed": 20260901,
+      "stored_zero_based_epoch": 99,
+      "checkpoint_sha256": "0f375c4e4900c40a1a6fbb1fe2881ddab1d8194400528405b6ba6218d9121d7a",
+      "config": {
+        "experiment": {
+          "name": "paper1_mean_gate_seed20260901",
+          "seed": 20260901
+        },
+        "data": {
+          "dataset": "nmnist",
+          "root": "DATA_ROOT",
+          "time_steps": 30,
+          "batch_size": 128,
+          "num_workers": 0,
+          "pin_memory": true,
+          "persistent_workers": false
+        },
+        "model": {
+          "architecture": "fc",
+          "input_shape": [
+            2,
+            34,
+            34
+          ],
+          "hidden_features": [
+            800,
+            800,
+            800
+          ],
+          "num_classes": 10
+        },
+        "neuron": {
+          "type": "lif",
+          "decay": 0.5,
+          "threshold": 1,
+          "surrogate_beta": 10
+        },
+        "method": {
+          "name": "sdfa",
+          "local_loss": "proxy",
+          "temporal_mode": "pointwise",
+          "local_weight": 1,
+          "feedback": {
+            "scale": 1
+          }
+        },
+        "training": {
+          "epochs": 100,
+          "learning_rate": 0.001,
+          "weight_decay": 0,
+          "gradient_clip": 1,
+          "lr_step": 60,
+          "lr_gamma": 0.1,
+          "checkpoint_epochs": [
+            10,
+            25,
+            50,
+            75,
+            100
+          ],
+          "output_dir": "OUTPUT_DIR"
+        },
+        "experiment03": {
+          "split_seed": 20260830,
+          "probe_seed": 20260831,
+          "validation_fraction": 0.1,
+          "probe_size": 1024,
+          "diagnostic_epochs": [
+            0,
+            10,
+            25,
+            50,
+            75,
+            100
+          ],
+          "seeds": [
+            20260830,
+            20260831,
+            20260901
+          ]
+        },
+        "paper1": {
+          "gate_mode": "temporal_mean_normmatched"
+        }
+      },
+      "optimizer_parameter_groups": [
+        {
+          "lr": 0.0001,
+          "betas": [
+            0.9,
+            0.999
+          ],
+          "eps": 1e-08,
+          "weight_decay": 0,
+          "amsgrad": false,
+          "maximize": false,
+          "foreach": null,
+          "capturable": false,
+          "differentiable": false,
+          "fused": null,
+          "decoupled_weight_decay": false,
+          "initial_lr": 0.001,
+          "parameter_tensor_count": 8
+        }
+      ],
+      "scheduler_state": {
+        "step_size": 60,
+        "gamma": 0.1,
+        "base_lrs": [
+          0.001
+        ],
+        "last_epoch": 100,
+        "_step_count": 101,
+        "_is_initial": false,
+        "_get_lr_called_within_step": false,
+        "_last_lr": [
+          0.0001
+        ]
+      },
+      "checkpoint_keys": [
+        "format_version",
+        "epoch",
+        "model_state",
+        "feedback_state",
+        "optimizer_state",
+        "scheduler_state",
+        "config",
+        "metrics",
+        "active_ranks",
+        "rng_state"
+      ]
+    },
+    {
+      "method": "MeanGate",
+      "seed": 20260908,
+      "stored_zero_based_epoch": 99,
+      "checkpoint_sha256": "4f6543e926f6caf3499bdb2eab1c969579baa9846b5a8022e7ea364f951cc4cd",
+      "config": {
+        "experiment": {
+          "name": "paper_v9_mean_gate_20260908",
+          "seed": 20260908
+        },
+        "data": {
+          "dataset": "nmnist",
+          "root": "DATA_ROOT",
+          "time_steps": 30,
+          "batch_size": 128,
+          "num_workers": 0,
+          "pin_memory": true,
+          "persistent_workers": false
+        },
+        "model": {
+          "architecture": "fc",
+          "input_shape": [
+            2,
+            34,
+            34
+          ],
+          "hidden_features": [
+            800,
+            800,
+            800
+          ],
+          "num_classes": 10
+        },
+        "neuron": {
+          "type": "lif",
+          "decay": 0.5,
+          "threshold": 1,
+          "surrogate_beta": 10
+        },
+        "method": {
+          "name": "sdfa",
+          "local_loss": "proxy",
+          "temporal_mode": "pointwise",
+          "local_weight": 1,
+          "feedback": {
+            "scale": 1
+          }
+        },
+        "training": {
+          "epochs": 100,
+          "learning_rate": 0.001,
+          "weight_decay": 0,
+          "gradient_clip": 1,
+          "lr_step": 60,
+          "lr_gamma": 0.1,
+          "checkpoint_epochs": [
+            10,
+            25,
+            50,
+            75,
+            100
+          ],
+          "output_dir": "OUTPUT_DIR"
+        },
+        "experiment03": {
+          "split_seed": 20260830,
+          "probe_seed": 20260831,
+          "validation_fraction": 0.1,
+          "probe_size": 1024,
+          "diagnostic_epochs": [
+            0,
+            10,
+            25,
+            50,
+            75,
+            100
+          ],
+          "seeds": [
+            20260830,
+            20260831,
+            20260901
+          ]
+        },
+        "paper1": {
+          "gate_mode": "temporal_mean_normmatched",
+          "model_kind": "snn"
+        }
+      },
+      "optimizer_parameter_groups": [
+        {
+          "lr": 0.0001,
+          "betas": [
+            0.9,
+            0.999
+          ],
+          "eps": 1e-08,
+          "weight_decay": 0,
+          "amsgrad": false,
+          "maximize": false,
+          "foreach": null,
+          "capturable": false,
+          "differentiable": false,
+          "fused": null,
+          "decoupled_weight_decay": false,
+          "initial_lr": 0.001,
+          "parameter_tensor_count": 8
+        }
+      ],
+      "scheduler_state": {
+        "step_size": 60,
+        "gamma": 0.1,
+        "base_lrs": [
+          0.001
+        ],
+        "last_epoch": 100,
+        "_step_count": 101,
+        "_is_initial": false,
+        "_get_lr_called_within_step": false,
+        "_last_lr": [
+          0.0001
+        ]
+      },
+      "checkpoint_keys": [
+        "format_version",
+        "epoch",
+        "model_state",
+        "feedback_state",
+        "optimizer_state",
+        "scheduler_state",
+        "config",
+        "metrics",
+        "active_ranks",
+        "rng_state"
+      ]
+    },
+    {
+      "method": "MeanGate",
+      "seed": 20260909,
+      "stored_zero_based_epoch": 99,
+      "checkpoint_sha256": "4fe3c1e770a5dd4feaf9d90eebd3c46dc0c459695f8834d3a925086fc5d60654",
+      "config": {
+        "experiment": {
+          "name": "paper_v9_mean_gate_20260909",
+          "seed": 20260909
+        },
+        "data": {
+          "dataset": "nmnist",
+          "root": "DATA_ROOT",
+          "time_steps": 30,
+          "batch_size": 128,
+          "num_workers": 0,
+          "pin_memory": true,
+          "persistent_workers": false
+        },
+        "model": {
+          "architecture": "fc",
+          "input_shape": [
+            2,
+            34,
+            34
+          ],
+          "hidden_features": [
+            800,
+            800,
+            800
+          ],
+          "num_classes": 10
+        },
+        "neuron": {
+          "type": "lif",
+          "decay": 0.5,
+          "threshold": 1,
+          "surrogate_beta": 10
+        },
+        "method": {
+          "name": "sdfa",
+          "local_loss": "proxy",
+          "temporal_mode": "pointwise",
+          "local_weight": 1,
+          "feedback": {
+            "scale": 1
+          }
+        },
+        "training": {
+          "epochs": 100,
+          "learning_rate": 0.001,
+          "weight_decay": 0,
+          "gradient_clip": 1,
+          "lr_step": 60,
+          "lr_gamma": 0.1,
+          "checkpoint_epochs": [
+            10,
+            25,
+            50,
+            75,
+            100
+          ],
+          "output_dir": "OUTPUT_DIR"
+        },
+        "experiment03": {
+          "split_seed": 20260830,
+          "probe_seed": 20260831,
+          "validation_fraction": 0.1,
+          "probe_size": 1024,
+          "diagnostic_epochs": [
+            0,
+            10,
+            25,
+            50,
+            75,
+            100
+          ],
+          "seeds": [
+            20260830,
+            20260831,
+            20260901
+          ]
+        },
+        "paper1": {
+          "gate_mode": "temporal_mean_normmatched",
+          "model_kind": "snn"
+        }
+      },
+      "optimizer_parameter_groups": [
+        {
+          "lr": 0.0001,
+          "betas": [
+            0.9,
+            0.999
+          ],
+          "eps": 1e-08,
+          "weight_decay": 0,
+          "amsgrad": false,
+          "maximize": false,
+          "foreach": null,
+          "capturable": false,
+          "differentiable": false,
+          "fused": null,
+          "decoupled_weight_decay": false,
+          "initial_lr": 0.001,
+          "parameter_tensor_count": 8
+        }
+      ],
+      "scheduler_state": {
+        "step_size": 60,
+        "gamma": 0.1,
+        "base_lrs": [
+          0.001
+        ],
+        "last_epoch": 100,
+        "_step_count": 101,
+        "_is_initial": false,
+        "_get_lr_called_within_step": false,
+        "_last_lr": [
+          0.0001
+        ]
+      },
+      "checkpoint_keys": [
+        "format_version",
+        "epoch",
+        "model_state",
+        "feedback_state",
+        "optimizer_state",
+        "scheduler_state",
+        "config",
+        "metrics",
+        "active_ranks",
+        "rng_state"
+      ]
+    },
+    {
+      "method": "ShuffledGate",
+      "seed": 20260830,
+      "stored_zero_based_epoch": 99,
+      "checkpoint_sha256": "24d244f8706a1aa0070a87a7ad98a8b74e4936318e21ef2e65013e84971fac29",
+      "config": {
+        "experiment": {
+          "name": "paper1_shuffled_gate_seed20260830",
+          "seed": 20260830
+        },
+        "data": {
+          "dataset": "nmnist",
+          "root": "DATA_ROOT",
+          "time_steps": 30,
+          "batch_size": 128,
+          "num_workers": 0,
+          "pin_memory": true,
+          "persistent_workers": false
+        },
+        "model": {
+          "architecture": "fc",
+          "input_shape": [
+            2,
+            34,
+            34
+          ],
+          "hidden_features": [
+            800,
+            800,
+            800
+          ],
+          "num_classes": 10
+        },
+        "neuron": {
+          "type": "lif",
+          "decay": 0.5,
+          "threshold": 1,
+          "surrogate_beta": 10
+        },
+        "method": {
+          "name": "sdfa",
+          "local_loss": "proxy",
+          "temporal_mode": "pointwise",
+          "local_weight": 1,
+          "feedback": {
+            "scale": 1
+          }
+        },
+        "training": {
+          "epochs": 100,
+          "learning_rate": 0.001,
+          "weight_decay": 0,
+          "gradient_clip": 1,
+          "lr_step": 60,
+          "lr_gamma": 0.1,
+          "checkpoint_epochs": [
+            10,
+            25,
+            50,
+            75,
+            100
+          ],
+          "output_dir": "OUTPUT_DIR"
+        },
+        "experiment03": {
+          "split_seed": 20260830,
+          "probe_seed": 20260831,
+          "validation_fraction": 0.1,
+          "probe_size": 1024,
+          "diagnostic_epochs": [
+            0,
+            10,
+            25,
+            50,
+            75,
+            100
+          ],
+          "seeds": [
+            20260830,
+            20260831,
+            20260901
+          ]
+        },
+        "paper1": {
+          "gate_mode": "timestep_shuffled"
+        }
+      },
+      "optimizer_parameter_groups": [
+        {
+          "lr": 0.0001,
+          "betas": [
+            0.9,
+            0.999
+          ],
+          "eps": 1e-08,
+          "weight_decay": 0,
+          "amsgrad": false,
+          "maximize": false,
+          "foreach": null,
+          "capturable": false,
+          "differentiable": false,
+          "fused": null,
+          "decoupled_weight_decay": false,
+          "initial_lr": 0.001,
+          "parameter_tensor_count": 8
+        }
+      ],
+      "scheduler_state": {
+        "step_size": 60,
+        "gamma": 0.1,
+        "base_lrs": [
+          0.001
+        ],
+        "last_epoch": 100,
+        "_step_count": 101,
+        "_is_initial": false,
+        "_get_lr_called_within_step": false,
+        "_last_lr": [
+          0.0001
+        ]
+      },
+      "checkpoint_keys": [
+        "format_version",
+        "epoch",
+        "model_state",
+        "feedback_state",
+        "optimizer_state",
+        "scheduler_state",
+        "config",
+        "metrics",
+        "active_ranks",
+        "rng_state"
+      ]
+    },
+    {
+      "method": "ShuffledGate",
+      "seed": 20260831,
+      "stored_zero_based_epoch": 99,
+      "checkpoint_sha256": "3cc680946d3d3d57547f7a6888864fddcff727bc1ef1cf30daff6768ea2e1c85",
+      "config": {
+        "experiment": {
+          "name": "paper1_shuffled_gate_seed20260831",
+          "seed": 20260831
+        },
+        "data": {
+          "dataset": "nmnist",
+          "root": "DATA_ROOT",
+          "time_steps": 30,
+          "batch_size": 128,
+          "num_workers": 0,
+          "pin_memory": true,
+          "persistent_workers": false
+        },
+        "model": {
+          "architecture": "fc",
+          "input_shape": [
+            2,
+            34,
+            34
+          ],
+          "hidden_features": [
+            800,
+            800,
+            800
+          ],
+          "num_classes": 10
+        },
+        "neuron": {
+          "type": "lif",
+          "decay": 0.5,
+          "threshold": 1,
+          "surrogate_beta": 10
+        },
+        "method": {
+          "name": "sdfa",
+          "local_loss": "proxy",
+          "temporal_mode": "pointwise",
+          "local_weight": 1,
+          "feedback": {
+            "scale": 1
+          }
+        },
+        "training": {
+          "epochs": 100,
+          "learning_rate": 0.001,
+          "weight_decay": 0,
+          "gradient_clip": 1,
+          "lr_step": 60,
+          "lr_gamma": 0.1,
+          "checkpoint_epochs": [
+            10,
+            25,
+            50,
+            75,
+            100
+          ],
+          "output_dir": "OUTPUT_DIR"
+        },
+        "experiment03": {
+          "split_seed": 20260830,
+          "probe_seed": 20260831,
+          "validation_fraction": 0.1,
+          "probe_size": 1024,
+          "diagnostic_epochs": [
+            0,
+            10,
+            25,
+            50,
+            75,
+            100
+          ],
+          "seeds": [
+            20260830,
+            20260831,
+            20260901
+          ]
+        },
+        "paper1": {
+          "gate_mode": "timestep_shuffled"
+        }
+      },
+      "optimizer_parameter_groups": [
+        {
+          "lr": 0.0001,
+          "betas": [
+            0.9,
+            0.999
+          ],
+          "eps": 1e-08,
+          "weight_decay": 0,
+          "amsgrad": false,
+          "maximize": false,
+          "foreach": null,
+          "capturable": false,
+          "differentiable": false,
+          "fused": null,
+          "decoupled_weight_decay": false,
+          "initial_lr": 0.001,
+          "parameter_tensor_count": 8
+        }
+      ],
+      "scheduler_state": {
+        "step_size": 60,
+        "gamma": 0.1,
+        "base_lrs": [
+          0.001
+        ],
+        "last_epoch": 100,
+        "_step_count": 101,
+        "_is_initial": false,
+        "_get_lr_called_within_step": false,
+        "_last_lr": [
+          0.0001
+        ]
+      },
+      "checkpoint_keys": [
+        "format_version",
+        "epoch",
+        "model_state",
+        "feedback_state",
+        "optimizer_state",
+        "scheduler_state",
+        "config",
+        "metrics",
+        "active_ranks",
+        "rng_state"
+      ]
+    },
+    {
+      "method": "ShuffledGate",
+      "seed": 20260901,
+      "stored_zero_based_epoch": 99,
+      "checkpoint_sha256": "5de9c6b1dd2a33bc7ada5f0431c39bf97831e179699f7cf6af09f3ba37944213",
+      "config": {
+        "experiment": {
+          "name": "paper1_shuffled_gate_seed20260901",
+          "seed": 20260901
+        },
+        "data": {
+          "dataset": "nmnist",
+          "root": "DATA_ROOT",
+          "time_steps": 30,
+          "batch_size": 128,
+          "num_workers": 0,
+          "pin_memory": true,
+          "persistent_workers": false
+        },
+        "model": {
+          "architecture": "fc",
+          "input_shape": [
+            2,
+            34,
+            34
+          ],
+          "hidden_features": [
+            800,
+            800,
+            800
+          ],
+          "num_classes": 10
+        },
+        "neuron": {
+          "type": "lif",
+          "decay": 0.5,
+          "threshold": 1,
+          "surrogate_beta": 10
+        },
+        "method": {
+          "name": "sdfa",
+          "local_loss": "proxy",
+          "temporal_mode": "pointwise",
+          "local_weight": 1,
+          "feedback": {
+            "scale": 1
+          }
+        },
+        "training": {
+          "epochs": 100,
+          "learning_rate": 0.001,
+          "weight_decay": 0,
+          "gradient_clip": 1,
+          "lr_step": 60,
+          "lr_gamma": 0.1,
+          "checkpoint_epochs": [
+            10,
+            25,
+            50,
+            75,
+            100
+          ],
+          "output_dir": "OUTPUT_DIR"
+        },
+        "experiment03": {
+          "split_seed": 20260830,
+          "probe_seed": 20260831,
+          "validation_fraction": 0.1,
+          "probe_size": 1024,
+          "diagnostic_epochs": [
+            0,
+            10,
+            25,
+            50,
+            75,
+            100
+          ],
+          "seeds": [
+            20260830,
+            20260831,
+            20260901
+          ]
+        },
+        "paper1": {
+          "gate_mode": "timestep_shuffled"
+        }
+      },
+      "optimizer_parameter_groups": [
+        {
+          "lr": 0.0001,
+          "betas": [
+            0.9,
+            0.999
+          ],
+          "eps": 1e-08,
+          "weight_decay": 0,
+          "amsgrad": false,
+          "maximize": false,
+          "foreach": null,
+          "capturable": false,
+          "differentiable": false,
+          "fused": null,
+          "decoupled_weight_decay": false,
+          "initial_lr": 0.001,
+          "parameter_tensor_count": 8
+        }
+      ],
+      "scheduler_state": {
+        "step_size": 60,
+        "gamma": 0.1,
+        "base_lrs": [
+          0.001
+        ],
+        "last_epoch": 100,
+        "_step_count": 101,
+        "_is_initial": false,
+        "_get_lr_called_within_step": false,
+        "_last_lr": [
+          0.0001
+        ]
+      },
+      "checkpoint_keys": [
+        "format_version",
+        "epoch",
+        "model_state",
+        "feedback_state",
+        "optimizer_state",
+        "scheduler_state",
+        "config",
+        "metrics",
+        "active_ranks",
+        "rng_state"
+      ]
+    },
+    {
+      "method": "ShuffledGate",
+      "seed": 20260908,
+      "stored_zero_based_epoch": 99,
+      "checkpoint_sha256": "4d69e086b10457295c0e51da08bcda190d63bf8bb19a0d30d9284a27653879cb",
+      "config": {
+        "experiment": {
+          "name": "paper_v9_shuffled_gate_20260908",
+          "seed": 20260908
+        },
+        "data": {
+          "dataset": "nmnist",
+          "root": "DATA_ROOT",
+          "time_steps": 30,
+          "batch_size": 128,
+          "num_workers": 0,
+          "pin_memory": true,
+          "persistent_workers": false
+        },
+        "model": {
+          "architecture": "fc",
+          "input_shape": [
+            2,
+            34,
+            34
+          ],
+          "hidden_features": [
+            800,
+            800,
+            800
+          ],
+          "num_classes": 10
+        },
+        "neuron": {
+          "type": "lif",
+          "decay": 0.5,
+          "threshold": 1,
+          "surrogate_beta": 10
+        },
+        "method": {
+          "name": "sdfa",
+          "local_loss": "proxy",
+          "temporal_mode": "pointwise",
+          "local_weight": 1,
+          "feedback": {
+            "scale": 1
+          }
+        },
+        "training": {
+          "epochs": 100,
+          "learning_rate": 0.001,
+          "weight_decay": 0,
+          "gradient_clip": 1,
+          "lr_step": 60,
+          "lr_gamma": 0.1,
+          "checkpoint_epochs": [
+            10,
+            25,
+            50,
+            75,
+            100
+          ],
+          "output_dir": "OUTPUT_DIR"
+        },
+        "experiment03": {
+          "split_seed": 20260830,
+          "probe_seed": 20260831,
+          "validation_fraction": 0.1,
+          "probe_size": 1024,
+          "diagnostic_epochs": [
+            0,
+            10,
+            25,
+            50,
+            75,
+            100
+          ],
+          "seeds": [
+            20260830,
+            20260831,
+            20260901
+          ]
+        },
+        "paper1": {
+          "gate_mode": "timestep_shuffled",
+          "model_kind": "snn"
+        }
+      },
+      "optimizer_parameter_groups": [
+        {
+          "lr": 0.0001,
+          "betas": [
+            0.9,
+            0.999
+          ],
+          "eps": 1e-08,
+          "weight_decay": 0,
+          "amsgrad": false,
+          "maximize": false,
+          "foreach": null,
+          "capturable": false,
+          "differentiable": false,
+          "fused": null,
+          "decoupled_weight_decay": false,
+          "initial_lr": 0.001,
+          "parameter_tensor_count": 8
+        }
+      ],
+      "scheduler_state": {
+        "step_size": 60,
+        "gamma": 0.1,
+        "base_lrs": [
+          0.001
+        ],
+        "last_epoch": 100,
+        "_step_count": 101,
+        "_is_initial": false,
+        "_get_lr_called_within_step": false,
+        "_last_lr": [
+          0.0001
+        ]
+      },
+      "checkpoint_keys": [
+        "format_version",
+        "epoch",
+        "model_state",
+        "feedback_state",
+        "optimizer_state",
+        "scheduler_state",
+        "config",
+        "metrics",
+        "active_ranks",
+        "rng_state"
+      ]
+    },
+    {
+      "method": "ShuffledGate",
+      "seed": 20260909,
+      "stored_zero_based_epoch": 99,
+      "checkpoint_sha256": "60b10a243add56995bb973da501c313d1203d82be1b61fe97e00a4ab6f6096e9",
+      "config": {
+        "experiment": {
+          "name": "paper_v9_shuffled_gate_20260909",
+          "seed": 20260909
+        },
+        "data": {
+          "dataset": "nmnist",
+          "root": "DATA_ROOT",
+          "time_steps": 30,
+          "batch_size": 128,
+          "num_workers": 0,
+          "pin_memory": true,
+          "persistent_workers": false
+        },
+        "model": {
+          "architecture": "fc",
+          "input_shape": [
+            2,
+            34,
+            34
+          ],
+          "hidden_features": [
+            800,
+            800,
+            800
+          ],
+          "num_classes": 10
+        },
+        "neuron": {
+          "type": "lif",
+          "decay": 0.5,
+          "threshold": 1,
+          "surrogate_beta": 10
+        },
+        "method": {
+          "name": "sdfa",
+          "local_loss": "proxy",
+          "temporal_mode": "pointwise",
+          "local_weight": 1,
+          "feedback": {
+            "scale": 1
+          }
+        },
+        "training": {
+          "epochs": 100,
+          "learning_rate": 0.001,
+          "weight_decay": 0,
+          "gradient_clip": 1,
+          "lr_step": 60,
+          "lr_gamma": 0.1,
+          "checkpoint_epochs": [
+            10,
+            25,
+            50,
+            75,
+            100
+          ],
+          "output_dir": "OUTPUT_DIR"
+        },
+        "experiment03": {
+          "split_seed": 20260830,
+          "probe_seed": 20260831,
+          "validation_fraction": 0.1,
+          "probe_size": 1024,
+          "diagnostic_epochs": [
+            0,
+            10,
+            25,
+            50,
+            75,
+            100
+          ],
+          "seeds": [
+            20260830,
+            20260831,
+            20260901
+          ]
+        },
+        "paper1": {
+          "gate_mode": "timestep_shuffled",
+          "model_kind": "snn"
+        }
+      },
+      "optimizer_parameter_groups": [
+        {
+          "lr": 0.0001,
+          "betas": [
+            0.9,
+            0.999
+          ],
+          "eps": 1e-08,
+          "weight_decay": 0,
+          "amsgrad": false,
+          "maximize": false,
+          "foreach": null,
+          "capturable": false,
+          "differentiable": false,
+          "fused": null,
+          "decoupled_weight_decay": false,
+          "initial_lr": 0.001,
+          "parameter_tensor_count": 8
+        }
+      ],
+      "scheduler_state": {
+        "step_size": 60,
+        "gamma": 0.1,
+        "base_lrs": [
+          0.001
+        ],
+        "last_epoch": 100,
+        "_step_count": 101,
+        "_is_initial": false,
+        "_get_lr_called_within_step": false,
+        "_last_lr": [
+          0.0001
+        ]
+      },
+      "checkpoint_keys": [
+        "format_version",
+        "epoch",
+        "model_state",
+        "feedback_state",
+        "optimizer_state",
+        "scheduler_state",
+        "config",
+        "metrics",
+        "active_ranks",
+        "rng_state"
+      ]
+    },
+    {
+      "method": "DVS SNN-DFA",
+      "seed": 20260830,
+      "stored_zero_based_epoch": 99,
+      "checkpoint_sha256": "66688715a5e593febcfeadea347f91017891418c89d03fbefadfc941f6b56c2b",
+      "config": {
+        "experiment": {
+          "name": "paper1_dvs_dfa_seed20260830",
+          "seed": 20260830
+        },
+        "data": {
+          "dataset": "dvs_gesture",
+          "root": "DATA_ROOT",
+          "time_steps": 30,
+          "batch_size": 16,
+          "num_workers": 0,
+          "pin_memory": true
+        },
+        "model": {
+          "architecture": "convsmall",
+          "input_shape": [
+            2,
+            128,
+            128
+          ],
+          "channels": [
+            32,
+            64
+          ],
+          "hidden_features": 256,
+          "pool": 2,
+          "num_classes": 11
+        },
+        "neuron": {
+          "type": "lif",
+          "decay": 0.5,
+          "threshold": 1,
+          "surrogate_beta": 10
+        },
+        "method": {
+          "name": "sdfa",
+          "local_loss": "proxy",
+          "temporal_mode": "pointwise",
+          "local_weight": 1,
+          "feedback": {
+            "scale": 1
+          }
+        },
+        "training": {
+          "epochs": 100,
+          "learning_rate": 0.001,
+          "weight_decay": 0,
+          "gradient_clip": 1,
+          "lr_step": 60,
+          "lr_gamma": 0.1,
+          "checkpoint_epochs": [
+            10,
+            25,
+            50,
+            75,
+            100
+          ],
+          "output_dir": "OUTPUT_DIR"
+        },
+        "experiment03": {
+          "split_seed": 20260830,
+          "probe_seed": 20260831,
+          "validation_fraction": 0.1,
+          "probe_size": 896,
+          "diagnostic_epochs": [
+            0,
+            10,
+            25,
+            50,
+            75,
+            100
+          ],
+          "seeds": [
+            20260830,
+            20260831,
+            20260901
+          ]
+        },
+        "paper1": {
+          "model_kind": "snn"
+        }
+      },
+      "optimizer_parameter_groups": [
+        {
+          "lr": 0.0001,
+          "betas": [
+            0.9,
+            0.999
+          ],
+          "eps": 1e-08,
+          "weight_decay": 0,
+          "amsgrad": false,
+          "maximize": false,
+          "foreach": null,
+          "capturable": false,
+          "differentiable": false,
+          "fused": null,
+          "decoupled_weight_decay": false,
+          "initial_lr": 0.001,
+          "parameter_tensor_count": 8
+        }
+      ],
+      "scheduler_state": {
+        "step_size": 60,
+        "gamma": 0.1,
+        "base_lrs": [
+          0.001
+        ],
+        "last_epoch": 100,
+        "_step_count": 101,
+        "_is_initial": false,
+        "_get_lr_called_within_step": false,
+        "_last_lr": [
+          0.0001
+        ]
+      },
+      "checkpoint_keys": [
+        "format_version",
+        "epoch",
+        "model_state",
+        "feedback_state",
+        "optimizer_state",
+        "scheduler_state",
+        "config",
+        "metrics",
+        "active_ranks",
+        "rng_state"
+      ]
+    },
+    {
+      "method": "DVS SNN-DFA",
+      "seed": 20260831,
+      "stored_zero_based_epoch": 99,
+      "checkpoint_sha256": "11cbc80703898052a2033d05bbd1ef67acc7414a9f519866c4e305b90c9f8ddb",
+      "config": {
+        "experiment": {
+          "name": "paper1_dvs_dfa_seed20260831",
+          "seed": 20260831
+        },
+        "data": {
+          "dataset": "dvs_gesture",
+          "root": "DATA_ROOT",
+          "time_steps": 30,
+          "batch_size": 16,
+          "num_workers": 0,
+          "pin_memory": true
+        },
+        "model": {
+          "architecture": "convsmall",
+          "input_shape": [
+            2,
+            128,
+            128
+          ],
+          "channels": [
+            32,
+            64
+          ],
+          "hidden_features": 256,
+          "pool": 2,
+          "num_classes": 11
+        },
+        "neuron": {
+          "type": "lif",
+          "decay": 0.5,
+          "threshold": 1,
+          "surrogate_beta": 10
+        },
+        "method": {
+          "name": "sdfa",
+          "local_loss": "proxy",
+          "temporal_mode": "pointwise",
+          "local_weight": 1,
+          "feedback": {
+            "scale": 1
+          }
+        },
+        "training": {
+          "epochs": 100,
+          "learning_rate": 0.001,
+          "weight_decay": 0,
+          "gradient_clip": 1,
+          "lr_step": 60,
+          "lr_gamma": 0.1,
+          "checkpoint_epochs": [
+            10,
+            25,
+            50,
+            75,
+            100
+          ],
+          "output_dir": "OUTPUT_DIR"
+        },
+        "experiment03": {
+          "split_seed": 20260830,
+          "probe_seed": 20260831,
+          "validation_fraction": 0.1,
+          "probe_size": 896,
+          "diagnostic_epochs": [
+            0,
+            10,
+            25,
+            50,
+            75,
+            100
+          ],
+          "seeds": [
+            20260830,
+            20260831,
+            20260901
+          ]
+        },
+        "paper1": {
+          "model_kind": "snn"
+        }
+      },
+      "optimizer_parameter_groups": [
+        {
+          "lr": 0.0001,
+          "betas": [
+            0.9,
+            0.999
+          ],
+          "eps": 1e-08,
+          "weight_decay": 0,
+          "amsgrad": false,
+          "maximize": false,
+          "foreach": null,
+          "capturable": false,
+          "differentiable": false,
+          "fused": null,
+          "decoupled_weight_decay": false,
+          "initial_lr": 0.001,
+          "parameter_tensor_count": 8
+        }
+      ],
+      "scheduler_state": {
+        "step_size": 60,
+        "gamma": 0.1,
+        "base_lrs": [
+          0.001
+        ],
+        "last_epoch": 100,
+        "_step_count": 101,
+        "_is_initial": false,
+        "_get_lr_called_within_step": false,
+        "_last_lr": [
+          0.0001
+        ]
+      },
+      "checkpoint_keys": [
+        "format_version",
+        "epoch",
+        "model_state",
+        "feedback_state",
+        "optimizer_state",
+        "scheduler_state",
+        "config",
+        "metrics",
+        "active_ranks",
+        "rng_state"
+      ]
+    },
+    {
+      "method": "DVS SNN-DFA",
+      "seed": 20260901,
+      "stored_zero_based_epoch": 99,
+      "checkpoint_sha256": "5ea5704255d28160e5eb1300dc605a6cd87af3a8e22739796fa881a47c5a5085",
+      "config": {
+        "experiment": {
+          "name": "paper1_dvs_dfa_seed20260901",
+          "seed": 20260901
+        },
+        "data": {
+          "dataset": "dvs_gesture",
+          "root": "DATA_ROOT",
+          "time_steps": 30,
+          "batch_size": 16,
+          "num_workers": 0,
+          "pin_memory": true
+        },
+        "model": {
+          "architecture": "convsmall",
+          "input_shape": [
+            2,
+            128,
+            128
+          ],
+          "channels": [
+            32,
+            64
+          ],
+          "hidden_features": 256,
+          "pool": 2,
+          "num_classes": 11
+        },
+        "neuron": {
+          "type": "lif",
+          "decay": 0.5,
+          "threshold": 1,
+          "surrogate_beta": 10
+        },
+        "method": {
+          "name": "sdfa",
+          "local_loss": "proxy",
+          "temporal_mode": "pointwise",
+          "local_weight": 1,
+          "feedback": {
+            "scale": 1
+          }
+        },
+        "training": {
+          "epochs": 100,
+          "learning_rate": 0.001,
+          "weight_decay": 0,
+          "gradient_clip": 1,
+          "lr_step": 60,
+          "lr_gamma": 0.1,
+          "checkpoint_epochs": [
+            10,
+            25,
+            50,
+            75,
+            100
+          ],
+          "output_dir": "OUTPUT_DIR"
+        },
+        "experiment03": {
+          "split_seed": 20260830,
+          "probe_seed": 20260831,
+          "validation_fraction": 0.1,
+          "probe_size": 896,
+          "diagnostic_epochs": [
+            0,
+            10,
+            25,
+            50,
+            75,
+            100
+          ],
+          "seeds": [
+            20260830,
+            20260831,
+            20260901
+          ]
+        },
+        "paper1": {
+          "model_kind": "snn"
+        }
+      },
+      "optimizer_parameter_groups": [
+        {
+          "lr": 0.0001,
+          "betas": [
+            0.9,
+            0.999
+          ],
+          "eps": 1e-08,
+          "weight_decay": 0,
+          "amsgrad": false,
+          "maximize": false,
+          "foreach": null,
+          "capturable": false,
+          "differentiable": false,
+          "fused": null,
+          "decoupled_weight_decay": false,
+          "initial_lr": 0.001,
+          "parameter_tensor_count": 8
+        }
+      ],
+      "scheduler_state": {
+        "step_size": 60,
+        "gamma": 0.1,
+        "base_lrs": [
+          0.001
+        ],
+        "last_epoch": 100,
+        "_step_count": 101,
+        "_is_initial": false,
+        "_get_lr_called_within_step": false,
+        "_last_lr": [
+          0.0001
+        ]
+      },
+      "checkpoint_keys": [
+        "format_version",
+        "epoch",
+        "model_state",
+        "feedback_state",
+        "optimizer_state",
+        "scheduler_state",
+        "config",
+        "metrics",
+        "active_ranks",
+        "rng_state"
+      ]
+    }
+  ]
+}

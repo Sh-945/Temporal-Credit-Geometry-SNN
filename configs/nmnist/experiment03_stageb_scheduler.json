@@ -1,0 +1,31 @@
+{
+  "purpose": "Cost-saving execution schedule only; no scientific hyperparameter changes",
+  "worker_entrypoint": "scripts/diagnostics/soft_spectral_worker.py",
+  "concurrency": 3,
+  "grouping": "same method across the three preregistered seeds",
+  "seed_order": [20260830, 20260831, 20260901],
+  "selected_alpha_from_stage_a": 0.75,
+  "cuda_mps": true,
+  "cublas_workspace_config": ":4096:8",
+  "omp_num_threads_per_worker": 4,
+  "mkl_num_threads_per_worker": 4,
+  "openblas_num_threads_per_worker": 4,
+  "scientific_equivalence": {
+    "model": "unchanged",
+    "optimizer": "unchanged",
+    "batch_size": "unchanged",
+    "time_steps": "unchanged",
+    "data_order_per_seed": "unchanged",
+    "initial_state_per_seed": "unchanged",
+    "diagnostics": "unchanged",
+    "partial_result_schema": "same run_cached/run_variant path as serial orchestrator"
+  },
+  "dependency_waves": [
+    "full_soft (all seeds)",
+    "full_random using exact per-seed full_soft rank schedules",
+    "full_dense (all seeds)",
+    "full_hard (all seeds)",
+    "full_bptt (all seeds)",
+    "predeclared conditional controls, if triggered"
+  ]
+}

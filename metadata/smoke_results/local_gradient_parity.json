@@ -1,0 +1,82 @@
+{
+  "status": "passed",
+  "check_scope": "deterministic synthetic source-level parity; no training",
+  "seed": 20260912,
+  "device": "cpu",
+  "temporal_mode": "pointwise",
+  "local_loss_reduction": "sum_over_layers(mean_over_T_B_D(spikes * detached_q))",
+  "explicit_contraction": "local_weight/(T*B*D_out) * sum_{t,b} delta[t,b]^T x[t,b]",
+  "tolerance": 1e-06,
+  "max_relative_error": 1.121796849321369e-07,
+  "layers": [
+    {
+      "layer": "H1",
+      "delta_shape": [
+        4,
+        3,
+        9
+      ],
+      "input_shape": [
+        4,
+        3,
+        32
+      ],
+      "gradient_shape": [
+        9,
+        32
+      ],
+      "global_reduction_scalar": 0.009259259259259259,
+      "explicit_vs_capture_max_relative_error": 8.485748694212991e-08,
+      "explicit_vs_capture_relative_l2_error": 4.547656448686623e-08,
+      "production_delta_relative_l2_error": 6.440854605216373e-08,
+      "explicit_vs_trainer_max_relative_error": 8.485747974133743e-08,
+      "explicit_vs_trainer_relative_l2_error": 6.622491633635775e-08
+    },
+    {
+      "layer": "H2",
+      "delta_shape": [
+        4,
+        3,
+        8
+      ],
+      "input_shape": [
+        4,
+        3,
+        9
+      ],
+      "gradient_shape": [
+        8,
+        9
+      ],
+      "global_reduction_scalar": 0.010416666666666666,
+      "explicit_vs_capture_max_relative_error": 1.121796849321369e-07,
+      "explicit_vs_capture_relative_l2_error": 9.125024238345633e-08,
+      "production_delta_relative_l2_error": 5.1664862610323325e-08,
+      "explicit_vs_trainer_max_relative_error": 1.121796849321369e-07,
+      "explicit_vs_trainer_relative_l2_error": 9.160599245866649e-08
+    },
+    {
+      "layer": "H3",
+      "delta_shape": [
+        4,
+        3,
+        7
+      ],
+      "input_shape": [
+        4,
+        3,
+        8
+      ],
+      "gradient_shape": [
+        7,
+        8
+      ],
+      "global_reduction_scalar": 0.011904761904761904,
+      "explicit_vs_capture_max_relative_error": 0.0,
+      "explicit_vs_capture_relative_l2_error": 0.0,
+      "production_delta_relative_l2_error": 5.364100630345092e-08,
+      "explicit_vs_trainer_max_relative_error": 0.0,
+      "explicit_vs_trainer_relative_l2_error": 0.0
+    }
+  ]
+}

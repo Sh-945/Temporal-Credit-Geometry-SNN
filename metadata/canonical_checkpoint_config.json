@@ -1,0 +1,184 @@
+{
+  "operation": "read-only release checkpoint inspection; no forward or optimizer step",
+  "bundled_checkpoint": "metadata/checkpoints/nmnist_snn_dfa_seed_20260830_epoch_100_release.pt",
+  "canonical_original_checkpoint_sha256": "b8f2c8c95c5944358405d35f2d38dcb293461fa1e8641e9e6cb29ab98e39a534",
+  "release_checkpoint_sha256": "c0039c51b76c9c3b6a19d80bf439f8921ee2a9121569de9333793f1b1e30ba2d",
+  "release_sanitization_report": "metadata/checkpoints/checkpoint_release_provenance.json",
+  "stored_zero_based_epoch": 99,
+  "config": {
+    "experiment": {
+      "name": "experiment03_full_dense_seed20260830",
+      "seed": 20260830
+    },
+    "data": {
+      "dataset": "nmnist",
+      "root": "DATA_ROOT",
+      "time_steps": 30,
+      "batch_size": 128,
+      "num_workers": 0,
+      "pin_memory": true,
+      "persistent_workers": false
+    },
+    "model": {
+      "architecture": "fc",
+      "input_shape": [
+        2,
+        34,
+        34
+      ],
+      "hidden_features": [
+        800,
+        800,
+        800
+      ],
+      "num_classes": 10
+    },
+    "neuron": {
+      "type": "lif",
+      "decay": 0.5,
+      "threshold": 1.0,
+      "surrogate_beta": 10.0
+    },
+    "method": {
+      "name": "sdfa",
+      "local_loss": "proxy",
+      "temporal_mode": "pointwise",
+      "local_weight": 1.0,
+      "feedback": {
+        "scale": 1.0
+      }
+    },
+    "training": {
+      "epochs": 100,
+      "learning_rate": 0.001,
+      "weight_decay": 0.0,
+      "gradient_clip": 1.0,
+      "lr_step": 60,
+      "lr_gamma": 0.1,
+      "checkpoint_epochs": [
+        10,
+        25,
+        50,
+        75,
+        100
+      ],
+      "output_dir": "OUTPUT_DIR"
+    },
+    "experiment03": {
+      "split_seed": 20260830,
+      "calibration_seed": 20260831,
+      "validation_fraction": 0.1,
+      "calibration_size": 1024,
+      "diagnostic_probe_size": 512,
+      "energy_threshold": 0.95,
+      "pilot_seed": 20260830,
+      "pilot_epochs": 50,
+      "full_seeds": [
+        20260830,
+        20260831,
+        20260901
+      ],
+      "diagnostic_epochs": [
+        0,
+        10,
+        25,
+        50,
+        75,
+        100
+      ],
+      "early_failure": {
+        "loss_explosion_threshold": 1000.0,
+        "validation_accuracy_threshold": 0.9,
+        "consecutive_epochs": 5
+      },
+      "automatic_controls": {
+        "lrmatch_accuracy_gain_pp": 0.1,
+        "lrmatch_alignment_relative_gain": 0.2,
+        "normmatched_validation_margin_pp": 0.1,
+        "normmatched_alignment_relative_gain": 0.2,
+        "directional_control_accuracy_gain_pp": 0.1,
+        "directional_control_alignment_relative_gain": 0.1
+      },
+      "verdict": {
+        "accuracy_margin_pp": 0.1,
+        "alignment_relative_gain": 0.25,
+        "rank_relative_reduction": 0.15
+      }
+    }
+  },
+  "optimizer_parameter_groups": [
+    {
+      "lr": 0.0001,
+      "betas": [
+        0.9,
+        0.999
+      ],
+      "eps": 1e-08,
+      "weight_decay": 0.0,
+      "amsgrad": false,
+      "maximize": false,
+      "foreach": null,
+      "capturable": false,
+      "differentiable": false,
+      "fused": null,
+      "decoupled_weight_decay": false,
+      "initial_lr": 0.001,
+      "parameter_tensor_count": 8
+    }
+  ],
+  "scheduler_state": {
+    "step_size": 60,
+    "gamma": 0.1,
+    "base_lrs": [
+      0.001
+    ],
+    "last_epoch": 100,
+    "_step_count": 101,
+    "_is_initial": false,
+    "_get_lr_called_within_step": false,
+    "_last_lr": [
+      0.0001
+    ]
+  },
+  "feedback_buffers": [
+    {
+      "state_key": "layers.0.B",
+      "shape": [
+        800,
+        10
+      ],
+      "dtype": "torch.float32",
+      "sha256_tensor": "a57078bd6e4e1c21121e410386dc26f04d4d6aa9a79cd3a47bd84bdedab588af"
+    },
+    {
+      "state_key": "layers.1.B",
+      "shape": [
+        800,
+        10
+      ],
+      "dtype": "torch.float32",
+      "sha256_tensor": "7e80e3c3bbb53b2bb35284bc004bde1cd8f9f7693511311827ae1cdbd3cd1dfd"
+    },
+    {
+      "state_key": "layers.2.B",
+      "shape": [
+        800,
+        10
+      ],
+      "dtype": "torch.float32",
+      "sha256_tensor": "db4c15534a087ad85e3bac64fcc2a2c6cd09537433c370ed980ad3aa43e3bae4"
+    }
+  ],
+  "checkpoint_keys": [
+    "active_ranks",
+    "config",
+    "epoch",
+    "feedback_state",
+    "format_version",
+    "metrics",
+    "model_state",
+    "optimizer_state",
+    "rng_state",
+    "scheduler_state"
+  ]
+}

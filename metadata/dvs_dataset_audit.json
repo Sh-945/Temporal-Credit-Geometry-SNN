@@ -1,0 +1,93 @@
+{
+  "status": "prepared",
+  "dataset": "DVS-Gesture",
+  "train_samples_official": 1176,
+  "test_samples_official": 288,
+  "formal_training_samples": 1058,
+  "validation_samples": 118,
+  "probe_samples": 896,
+  "sample_shape": [
+    30,
+    2,
+    128,
+    128
+  ],
+  "first_label": 0,
+  "train_label_counts": {
+    "0": 97,
+    "1": 98,
+    "2": 98,
+    "3": 98,
+    "4": 98,
+    "5": 98,
+    "6": 99,
+    "7": 196,
+    "8": 98,
+    "9": 98,
+    "10": 98
+  },
+  "test_label_counts": {
+    "0": 24,
+    "1": 24,
+    "2": 24,
+    "3": 24,
+    "4": 24,
+    "5": 24,
+    "6": 24,
+    "7": 48,
+    "8": 24,
+    "9": 24,
+    "10": 24
+  },
+  "probe_label_counts": {
+    "basis_fit": {
+      "7": 85,
+      "10": 37,
+      "6": 35,
+      "0": 37,
+      "2": 46,
+      "3": 38,
+      "5": 32,
+      "4": 38,
+      "1": 35,
+      "8": 35,
+      "9": 30
+    },
+    "basis_eval": {
+      "10": 41,
+      "3": 29,
+      "7": 70,
+      "8": 45,
+      "9": 48,
+      "1": 41,
+      "5": 37,
+      "4": 35,
+      "6": 37,
+      "0": 35,
+      "2": 30
+    }
+  },
+  "dataset_checksum": {
+    "algorithm": "sha256_path_size_and_content",
+    "sha256": "0e1e881ee055d7524f3e52c35cd3ce820ac12c4d95ff00d59de53d21700a169d",
+    "files": 1464,
+    "bytes": 259188466
+  },
+  "paired_initializations": [
+    {
+      "seed": 20260830,
+      "model_checksum": "3dd6d757ed3daba648fa5c001c107efe161e347ca01616560b67ab71a2adfa56",
+      "feedback_checksum": "eceff6b72c538ed2b82ba60cdf48780f5b698074e7dd2c0dd9b38c83a094b1de"
+    },
+    {
+      "seed": 20260831,
+      "model_checksum": "2372883dbfc4fc50f1dea1e65639de255262f28fcbe81a6fc6cb5324e1365e4f",
+      "feedback_checksum": "013ba41651bcb9fb2498469a2edb93cda1b96e029b313bf4bb6f71bc0ab4b864"
+    },
+    {
+      "seed": 20260901,
+      "model_checksum": "16063d7fda38766bdfb45744b0a3eee20999732eff44ed65d71fdd3ab9df2964",
+      "feedback_checksum": "7cbc63bdf7605bd649009abdc349be03ae870f5eee4e098370efd2f9ee6152d8"
+    }
+  ]
+}

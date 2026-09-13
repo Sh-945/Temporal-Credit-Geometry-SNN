@@ -1,0 +1,18 @@
+name: icassp27-credit-geometry
+channels:
+  - pytorch
+  - nvidia
+  - conda-forge
+dependencies:
+  - python=3.12.3
+  - pip
+  - pip:
+      - torch==2.8.0
+      - numpy==2.3.2
+      - pandas==3.0.5
+      - PyYAML==6.0.2
+      - h5py==3.16.0
+      - matplotlib==3.10.5
+
+# The archived runs used the PyTorch CUDA 12.8 build (2.8.0+cu128).
+# Select the matching wheel/index for the host CUDA environment when installing.

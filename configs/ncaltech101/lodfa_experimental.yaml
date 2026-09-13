@@ -1,0 +1,49 @@
+experiment:
+  name: ncaltech101_conv_lodfa_experimental
+  seed: 42
+data:
+  dataset: ncaltech101
+  root: ../data
+  time_steps: 30
+  batch_size: 16
+  num_workers: 0
+  resize: [64, 64]
+  test_fraction: 0.2
+model:
+  architecture: conv
+  input_shape: [2, 64, 64]
+  channels: [32, 64]
+  hidden_features: 256
+  pool: 2
+  num_classes: 101
+neuron:
+  type: lif
+  decay: 0.5
+  threshold: 1.0
+  surrogate_beta: 10.0
+method:
+  name: lodfa
+  local_loss: proxy
+  temporal_mode: pointwise
+  local_weight: 1.0
+  feedback:
+    rank: 32
+    layer_ranks: null
+    rank_fraction: null
+    trainable: true
+    scale: 1.0
+    loss_weights: {alignment: 0.001, orthogonal: 0.0001, hoyer: 0.00001}
+    dynamic_rank:
+      enabled: true
+      warmup_epochs: 10
+      update_interval: 5
+      energy_threshold: 0.95
+      minimum_rank: 2
+training:
+  epochs: 100
+  learning_rate: 0.001
+  weight_decay: 0.0
+  gradient_clip: 1.0
+  lr_step: 60
+  lr_gamma: 0.1
+  output_dir: outputs/ncaltech101/lodfa_experimental_seed42

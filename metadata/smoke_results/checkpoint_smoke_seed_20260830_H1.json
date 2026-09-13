@@ -1,0 +1,89 @@
+{
+  "status": "passed",
+  "operation": "checkpoint replay only; no optimizer step; no training",
+  "dataset": "N-MNIST",
+  "seed": 20260830,
+  "layer": "H1",
+  "checkpoint": "metadata/checkpoints/nmnist_snn_dfa_seed_20260830_epoch_100_release.pt",
+  "checkpoint_sha256": "c0039c51b76c9c3b6a19d80bf439f8921ee2a9121569de9333793f1b1e30ba2d",
+  "probe": "metadata/splits/nmnist_diagnostic_probe.csv",
+  "probe_sha256": "b3bc4fdf3d3bbe28be7530b656b7db0f2c59fec0eea4c16247418c30bf4794bb",
+  "probe_split": "basis_eval",
+  "probe_samples": 512,
+  "time_steps": 30,
+  "checks": {
+    "checkpoint_sha256": "passed",
+    "checkpoint_completed_epoch_100": "passed",
+    "probe_index_order": "passed",
+    "probe_fit_eval_assignment": "passed",
+    "sample_count_512": "passed",
+    "explicit_gradient_contraction": "passed",
+    "covariance_identity": "passed",
+    "frozen_r95": "passed",
+    "frozen_within_fraction": "passed"
+  },
+  "max_production_delta_relative_l2_error": 5.32639781170019e-08,
+  "max_explicit_gradient_relative_error": 2.7921030762554063e-07,
+  "expected_r95": 546,
+  "measured_r95": 546,
+  "expected_within_time_trace_fraction": 0.892891085269444,
+  "measured_within_time_trace_fraction": 0.8928910990951194,
+  "decomposition": {
+    "shape_T_N_D": [
+      30,
+      512,
+      800
+    ],
+    "centering": "single global mean over all T*N observations",
+    "scatter_identity": "S_total = S_within_time + S_between_sample",
+    "identity_relative_frobenius": 6.990574982612005e-07,
+    "trace_fraction_sum": 1.00000004034235,
+    "components": {
+      "total": {
+        "scatter_trace": 42.38976921038039,
+        "trace_fraction_of_total": 1.0,
+        "observations": 15360,
+        "ambient_dim": 800,
+        "r50": 124,
+        "r80": 321,
+        "r90": 448,
+        "r95": 546,
+        "r99": 680,
+        "stable_rank": 43.271600170884994,
+        "entropy_rank": 456.88620029065555,
+        "participation_ratio": 282.8370329592771,
+        "r95_over_ambient": 0.6825
+      },
+      "within_time": {
+        "scatter_trace": 37.849447620645,
+        "trace_fraction_of_total": 0.8928910990951194,
+        "observations": 15360,
+        "ambient_dim": 800,
+        "r50": 136,
+        "r80": 332,
+        "r90": 456,
+        "r95": 552,
+        "r99": 682,
+        "stable_rank": 107.48126326140222,
+        "entropy_rank": 497.1621491532632,
+        "participation_ratio": 371.7273250331151,
+        "r95_over_ambient": 0.69
+      },
+      "between_sample": {
+        "scatter_trace": 4.540323299838296,
+        "trace_fraction_of_total": 0.10710894124723055,
+        "observations": 15360,
+        "ambient_dim": 800,
+        "r50": 5,
+        "r80": 21,
+        "r90": 45,
+        "r95": 73,
+        "r99": 148,
+        "stable_rank": 5.611279203765237,
+        "entropy_rank": 30.412453016025736,
+        "participation_ratio": 13.469096043031444,
+        "r95_over_ambient": 0.09125
+      }
+    }
+  }
+}

@@ -1,0 +1,45 @@
+experiment:
+  name: paper1_experiment03_dvs_gesture
+  seed: 20260830
+data:
+  dataset: dvs_gesture
+  root: ../data
+  time_steps: 30
+  batch_size: 16
+  num_workers: 0
+  pin_memory: true
+model:
+  architecture: convsmall
+  input_shape: [2, 128, 128]
+  channels: [32, 64]
+  hidden_features: 256
+  pool: 2
+  num_classes: 11
+neuron:
+  type: lif
+  decay: 0.5
+  threshold: 1.0
+  surrogate_beta: 10.0
+method:
+  name: sdfa
+  local_loss: proxy
+  temporal_mode: pointwise
+  local_weight: 1.0
+  feedback:
+    scale: 1.0
+training:
+  epochs: 100
+  learning_rate: 0.001
+  weight_decay: 0.0
+  gradient_clip: 1.0
+  lr_step: 60
+  lr_gamma: 0.1
+  checkpoint_epochs: [10, 25, 50, 75, 100]
+  output_dir: results/paper1_experiment03_placeholder
+experiment03:
+  split_seed: 20260830
+  probe_seed: 20260831
+  validation_fraction: 0.10
+  probe_size: 896
+  diagnostic_epochs: [0, 10, 25, 50, 75, 100]
+  seeds: [20260830, 20260831, 20260901]

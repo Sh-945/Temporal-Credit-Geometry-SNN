@@ -1,0 +1,36 @@
+experiment:
+  name: dvs_gesture_convsmall_pipesdfa
+  seed: 42
+data:
+  dataset: dvs_gesture
+  root: ../data
+  time_steps: 30
+  batch_size: 16
+  num_workers: 0
+model:
+  architecture: convsmall
+  input_shape: [2, 128, 128]
+  channels: [32, 64]
+  hidden_features: 256
+  pool: 2
+  num_classes: 11
+neuron:
+  type: lif
+  decay: 0.5
+  threshold: 1.0
+  surrogate_beta: 10.0
+method:
+  name: pipesdfa
+  local_loss: proxy
+  temporal_mode: pointwise
+  local_weight: 1.0
+  feedback:
+    scale: 1.0
+training:
+  epochs: 100
+  learning_rate: 0.001
+  weight_decay: 0.0
+  gradient_clip: 1.0
+  lr_step: 60
+  lr_gamma: 0.1
+  output_dir: outputs/dvs_gesture/pipesdfa_seed42

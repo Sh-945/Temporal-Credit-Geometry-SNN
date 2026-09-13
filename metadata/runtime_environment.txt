@@ -1,0 +1,16 @@
+Frozen run environment (read-only audit)
+python=3.12.3
+torch=2.8.0+cu128
+numpy=2.3.2
+pandas=3.0.5
+pyyaml=6.0.2
+h5py=3.16.0
+matplotlib=3.10.5
+torch_cuda=12.8
+cudnn=91002
+gpu=NVIDIA GeForce RTX 4090
+
+The first four package versions and CUDA/cuDNN values are archived in the run
+manifest/environment files. The remaining package versions were read directly
+from the original completed-run environment during this release audit. No
+package installation or experiment execution was performed by that query.

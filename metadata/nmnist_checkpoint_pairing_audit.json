@@ -1,0 +1,113 @@
+{
+  "passed": true,
+  "rows": [
+    {
+      "seed": 20260830,
+      "method": "dfa_trained",
+      "forward_initialization_match": true,
+      "feedback_initialization_match_or_na": true,
+      "matched_recipe": true,
+      "checkpoint_presence": {
+        "0": true,
+        "10": true,
+        "25": true,
+        "50": true,
+        "75": true,
+        "100": true
+      },
+      "passed": true,
+      "initial_model_sha256": "5b01de1b87460e8e2ef1f14349886344692e1b8a8ca55c45b731482a1e010a92",
+      "initial_feedback_sha256": "df5dd18ccd0eab9eae96fa23bec180f6a001d3c667c2aebe7d2d1882fddd9310"
+    },
+    {
+      "seed": 20260830,
+      "method": "bptt_trained",
+      "forward_initialization_match": true,
+      "feedback_initialization_match_or_na": true,
+      "matched_recipe": true,
+      "checkpoint_presence": {
+        "0": true,
+        "10": true,
+        "25": true,
+        "50": true,
+        "75": true,
+        "100": true
+      },
+      "passed": true,
+      "initial_model_sha256": "5b01de1b87460e8e2ef1f14349886344692e1b8a8ca55c45b731482a1e010a92",
+      "initial_feedback_sha256": "df5dd18ccd0eab9eae96fa23bec180f6a001d3c667c2aebe7d2d1882fddd9310"
+    },
+    {
+      "seed": 20260831,
+      "method": "dfa_trained",
+      "forward_initialization_match": true,
+      "feedback_initialization_match_or_na": true,
+      "matched_recipe": true,
+      "checkpoint_presence": {
+        "0": true,
+        "10": true,
+        "25": true,
+        "50": true,
+        "75": true,
+        "100": true
+      },
+      "passed": true,
+      "initial_model_sha256": "21792855b56305732efa7b8b712b802abb0d9bd4da1e0b533d899ba7e8a75874",
+      "initial_feedback_sha256": "db69c7856ea162bc56c584d57f3c5de79819c4b5eb5b010b96c8f30d6d305dcb"
+    },
+    {
+      "seed": 20260831,
+      "method": "bptt_trained",
+      "forward_initialization_match": true,
+      "feedback_initialization_match_or_na": true,
+      "matched_recipe": true,
+      "checkpoint_presence": {
+        "0": true,
+        "10": true,
+        "25": true,
+        "50": true,
+        "75": true,
+        "100": true
+      },
+      "passed": true,
+      "initial_model_sha256": "21792855b56305732efa7b8b712b802abb0d9bd4da1e0b533d899ba7e8a75874",
+      "initial_feedback_sha256": "db69c7856ea162bc56c584d57f3c5de79819c4b5eb5b010b96c8f30d6d305dcb"
+    },
+    {
+      "seed": 20260901,
+      "method": "dfa_trained",
+      "forward_initialization_match": true,
+      "feedback_initialization_match_or_na": true,
+      "matched_recipe": true,
+      "checkpoint_presence": {
+        "0": true,
+        "10": true,
+        "25": true,
+        "50": true,
+        "75": true,
+        "100": true
+      },
+      "passed": true,
+      "initial_model_sha256": "dc414814070183d16ee90423106bad027e583deee7bef2ec8359d283d2985942",
+      "initial_feedback_sha256": "e230106f52a02cef6d0d5582a6e92e1d3c9ad17dafcdf12d456e75860f058137"
+    },
+    {
+      "seed": 20260901,
+      "method": "bptt_trained",
+      "forward_initialization_match": true,
+      "feedback_initialization_match_or_na": true,
+      "matched_recipe": true,
+      "checkpoint_presence": {
+        "0": true,
+        "10": true,
+        "25": true,
+        "50": true,
+        "75": true,
+        "100": true
+      },
+      "passed": true,
+      "initial_model_sha256": "dc414814070183d16ee90423106bad027e583deee7bef2ec8359d283d2985942",
+      "initial_feedback_sha256": "e230106f52a02cef6d0d5582a6e92e1d3c9ad17dafcdf12d456e75860f058137"
+    }
+  ]
+}

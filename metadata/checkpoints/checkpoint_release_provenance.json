@@ -1,0 +1,18 @@
+{
+  "operation": "path-only config sanitization; no training or optimizer step",
+  "canonical_original_sha256": "b8f2c8c95c5944358405d35f2d38dcb293461fa1e8641e9e6cb29ab98e39a534",
+  "release_relative_path": "metadata/checkpoints/nmnist_snn_dfa_seed_20260830_epoch_100_release.pt",
+  "release_sha256": "c0039c51b76c9c3b6a19d80bf439f8921ee2a9121569de9333793f1b1e30ba2d",
+  "release_size_bytes": 37803316,
+  "changed_config_keys": [
+    "config._config_path",
+    "config.data.root",
+    "config.training.output_dir"
+  ],
+  "removed_values_recorded": false,
+  "scientific_state_sha256": "7f7082cd67da295aa84d40c066f521f1c8832d4c164ba47b87056fb8b209e1c2",
+  "scientific_state_equal_after_reload": true,
+  "tensor_count": 37,
+  "all_non_config_tensors_equal_after_reload": true,
+  "private_path_scan_after_reload": "passed"
+}

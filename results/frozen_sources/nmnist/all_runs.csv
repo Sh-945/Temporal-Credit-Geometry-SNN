@@ -1,0 +1,51 @@
+dataset,method,seed,git_commit,checkpoint_rule,test_accuracy,test_loss,best_validation_epoch,source_file
+N-MNIST,SNN-DFA,20260830,UNAVAILABLE,completed_epoch_100,0.9795,0.0213785537153482,49,results/paper1_experiment03_20260901_server/stageA_bptt/test_results.csv
+N-MNIST,SNN-DFA,20260830,UNAVAILABLE,validation_accuracy_max_tie_lower_loss,0.9796,0.0221327763408422,49,results/paper1_experiment03_20260901_server/stageA_bptt/test_results.csv
+N-MNIST,SNN-DFA,20260831,UNAVAILABLE,completed_epoch_100,0.9802,0.0209864981979131,66,results/paper1_experiment03_20260901_server/stageA_bptt/test_results.csv
+N-MNIST,SNN-DFA,20260831,UNAVAILABLE,validation_accuracy_max_tie_lower_loss,0.9805,0.0210296096727252,66,results/paper1_experiment03_20260901_server/stageA_bptt/test_results.csv
+N-MNIST,SNN-DFA,20260901,UNAVAILABLE,completed_epoch_100,0.9793,0.0217346093684434,55,results/paper1_experiment03_20260901_server/stageA_bptt/test_results.csv
+N-MNIST,SNN-DFA,20260901,UNAVAILABLE,validation_accuracy_max_tie_lower_loss,0.9783,0.0229822759807109,55,results/paper1_experiment03_20260901_server/stageA_bptt/test_results.csv
+N-MNIST,SNN-DFA,20260908,UNAVAILABLE,completed_epoch_100,0.9792,0.021327164921164512,78,results/paper_v9_signal_processing/03_five_seed/checkpoints/dfa_trained/seed_20260908/variant_summary.json
+N-MNIST,SNN-DFA,20260908,UNAVAILABLE,validation_accuracy_max_tie_lower_loss,0.9799,0.021265442913770676,78,results/paper_v9_signal_processing/03_five_seed/checkpoints/dfa_trained/seed_20260908/variant_summary.json
+N-MNIST,SNN-DFA,20260909,UNAVAILABLE,completed_epoch_100,0.9805,0.02093916489481926,42,results/paper_v9_signal_processing/03_five_seed/checkpoints/dfa_trained/seed_20260909/variant_summary.json
+N-MNIST,SNN-DFA,20260909,UNAVAILABLE,validation_accuracy_max_tie_lower_loss,0.9787,0.022500664907693865,42,results/paper_v9_signal_processing/03_five_seed/checkpoints/dfa_trained/seed_20260909/variant_summary.json
+N-MNIST,matched SNN-BPTT,20260830,UNAVAILABLE,completed_epoch_100,0.9876,0.0098054439276456,95,results/paper1_experiment03_20260901_server/stageA_bptt/test_results.csv
+N-MNIST,matched SNN-BPTT,20260830,UNAVAILABLE,validation_accuracy_max_tie_lower_loss,0.9876,0.009748055075109,95,results/paper1_experiment03_20260901_server/stageA_bptt/test_results.csv
+N-MNIST,matched SNN-BPTT,20260831,UNAVAILABLE,completed_epoch_100,0.9895,0.0096453882509842,90,results/paper1_experiment03_20260901_server/stageA_bptt/test_results.csv
+N-MNIST,matched SNN-BPTT,20260831,UNAVAILABLE,validation_accuracy_max_tie_lower_loss,0.9894,0.0097562772857025,90,results/paper1_experiment03_20260901_server/stageA_bptt/test_results.csv
+N-MNIST,matched SNN-BPTT,20260901,UNAVAILABLE,completed_epoch_100,0.9897,0.0091246662827208,75,results/paper1_experiment03_20260901_server/stageA_bptt/test_results.csv
+N-MNIST,matched SNN-BPTT,20260901,UNAVAILABLE,validation_accuracy_max_tie_lower_loss,0.9893,0.0093222217239439,75,results/paper1_experiment03_20260901_server/stageA_bptt/test_results.csv
+N-MNIST,matched SNN-BPTT,20260908,UNAVAILABLE,completed_epoch_100,0.9897,0.009382443884387612,80,results/paper_v9_signal_processing/03_five_seed/checkpoints/bptt_trained/seed_20260908/variant_summary.json
+N-MNIST,matched SNN-BPTT,20260908,UNAVAILABLE,validation_accuracy_max_tie_lower_loss,0.9891,0.009522332896105944,80,results/paper_v9_signal_processing/03_five_seed/checkpoints/bptt_trained/seed_20260908/variant_summary.json
+N-MNIST,matched SNN-BPTT,20260909,UNAVAILABLE,completed_epoch_100,0.9887,0.00964705495648086,82,results/paper_v9_signal_processing/03_five_seed/checkpoints/bptt_trained/seed_20260909/variant_summary.json
+N-MNIST,matched SNN-BPTT,20260909,UNAVAILABLE,validation_accuracy_max_tie_lower_loss,0.9886,0.009744555203616619,82,results/paper_v9_signal_processing/03_five_seed/checkpoints/bptt_trained/seed_20260909/variant_summary.json
+N-MNIST,temporal ANN-DFA,20260830,UNAVAILABLE,completed_epoch_100,0.9867,0.0275968871474266,18,results/paper1_experiment03_20260901_server/stageB_ann/test_results.csv
+N-MNIST,temporal ANN-DFA,20260830,UNAVAILABLE,validation_accuracy_max_tie_lower_loss,0.9867,0.0309174650490283,18,results/paper1_experiment03_20260901_server/stageB_ann/test_results.csv
+N-MNIST,temporal ANN-DFA,20260831,UNAVAILABLE,completed_epoch_100,0.986,0.0278398516595363,42,results/paper1_experiment03_20260901_server/stageB_ann/test_results.csv
+N-MNIST,temporal ANN-DFA,20260831,UNAVAILABLE,validation_accuracy_max_tie_lower_loss,0.9867,0.0282433978915214,42,results/paper1_experiment03_20260901_server/stageB_ann/test_results.csv
+N-MNIST,temporal ANN-DFA,20260901,UNAVAILABLE,completed_epoch_100,0.9852,0.0283129748284816,24,results/paper1_experiment03_20260901_server/stageB_ann/test_results.csv
+N-MNIST,temporal ANN-DFA,20260901,UNAVAILABLE,validation_accuracy_max_tie_lower_loss,0.9856,0.0293325410127639,24,results/paper1_experiment03_20260901_server/stageB_ann/test_results.csv
+N-MNIST,temporal ANN-DFA,20260908,UNAVAILABLE,completed_epoch_100,0.9861,0.027419380855560303,19,results/paper_v9_signal_processing/03_five_seed/checkpoints/temporal_ann_dfa/seed_20260908/variant_summary.json
+N-MNIST,temporal ANN-DFA,20260908,UNAVAILABLE,validation_accuracy_max_tie_lower_loss,0.9871,0.030833746093511583,19,results/paper_v9_signal_processing/03_five_seed/checkpoints/temporal_ann_dfa/seed_20260908/variant_summary.json
+N-MNIST,temporal ANN-DFA,20260909,UNAVAILABLE,completed_epoch_100,0.9862,0.0274838947057724,18,results/paper_v9_signal_processing/03_five_seed/checkpoints/temporal_ann_dfa/seed_20260909/variant_summary.json
+N-MNIST,temporal ANN-DFA,20260909,UNAVAILABLE,validation_accuracy_max_tie_lower_loss,0.986,0.028547427198290825,18,results/paper_v9_signal_processing/03_five_seed/checkpoints/temporal_ann_dfa/seed_20260909/variant_summary.json
+N-MNIST,MeanGate,20260830,UNAVAILABLE,completed_epoch_100,0.9144,0.0994278285741806,94,results/paper1_experiment03_20260901_server/stageC_gate/test_results.csv
+N-MNIST,MeanGate,20260830,UNAVAILABLE,validation_accuracy_max_tie_lower_loss,0.9123,0.0993451067924499,94,results/paper1_experiment03_20260901_server/stageC_gate/test_results.csv
+N-MNIST,MeanGate,20260831,UNAVAILABLE,completed_epoch_100,0.9099,0.0999977727413177,84,results/paper1_experiment03_20260901_server/stageC_gate/test_results.csv
+N-MNIST,MeanGate,20260831,UNAVAILABLE,validation_accuracy_max_tie_lower_loss,0.9101,0.1000383288383483,84,results/paper1_experiment03_20260901_server/stageC_gate/test_results.csv
+N-MNIST,MeanGate,20260901,UNAVAILABLE,completed_epoch_100,0.9124,0.0999034391164779,99,results/paper1_experiment03_20260901_server/stageC_gate/test_results.csv
+N-MNIST,MeanGate,20260901,UNAVAILABLE,validation_accuracy_max_tie_lower_loss,0.9112,0.100084384226799,99,results/paper1_experiment03_20260901_server/stageC_gate/test_results.csv
+N-MNIST,MeanGate,20260908,UNAVAILABLE,completed_epoch_100,0.9079,0.10057482879161835,99,results/paper_v9_signal_processing/03_five_seed/checkpoints/mean_gate/seed_20260908/variant_summary.json
+N-MNIST,MeanGate,20260908,UNAVAILABLE,validation_accuracy_max_tie_lower_loss,0.9114,0.10067294096946716,99,results/paper_v9_signal_processing/03_five_seed/checkpoints/mean_gate/seed_20260908/variant_summary.json
+N-MNIST,MeanGate,20260909,UNAVAILABLE,completed_epoch_100,0.9077,0.10097666223049163,93,results/paper_v9_signal_processing/03_five_seed/checkpoints/mean_gate/seed_20260909/variant_summary.json
+N-MNIST,MeanGate,20260909,UNAVAILABLE,validation_accuracy_max_tie_lower_loss,0.9085,0.10098632802963257,93,results/paper_v9_signal_processing/03_five_seed/checkpoints/mean_gate/seed_20260909/variant_summary.json
+N-MNIST,ShuffledGate,20260830,UNAVAILABLE,completed_epoch_100,0.9105,0.1015887724399566,81,results/paper1_experiment03_20260901_server/stageC_gate/test_results.csv
+N-MNIST,ShuffledGate,20260830,UNAVAILABLE,validation_accuracy_max_tie_lower_loss,0.9111,0.101754885149002,81,results/paper1_experiment03_20260901_server/stageC_gate/test_results.csv
+N-MNIST,ShuffledGate,20260831,UNAVAILABLE,completed_epoch_100,0.9081,0.1022702177524566,93,results/paper1_experiment03_20260901_server/stageC_gate/test_results.csv
+N-MNIST,ShuffledGate,20260831,UNAVAILABLE,validation_accuracy_max_tie_lower_loss,0.9078,0.102294496011734,93,results/paper1_experiment03_20260901_server/stageC_gate/test_results.csv
+N-MNIST,ShuffledGate,20260901,UNAVAILABLE,completed_epoch_100,0.91,0.1014482735395431,61,results/paper1_experiment03_20260901_server/stageC_gate/test_results.csv
+N-MNIST,ShuffledGate,20260901,UNAVAILABLE,validation_accuracy_max_tie_lower_loss,0.9083,0.1019440505266189,61,results/paper1_experiment03_20260901_server/stageC_gate/test_results.csv
+N-MNIST,ShuffledGate,20260908,UNAVAILABLE,completed_epoch_100,0.9095,0.10178927338123321,77,results/paper_v9_signal_processing/03_five_seed/checkpoints/shuffled_gate/seed_20260908/variant_summary.json
+N-MNIST,ShuffledGate,20260908,UNAVAILABLE,validation_accuracy_max_tie_lower_loss,0.9094,0.10205432848930358,77,results/paper_v9_signal_processing/03_five_seed/checkpoints/shuffled_gate/seed_20260908/variant_summary.json
+N-MNIST,ShuffledGate,20260909,UNAVAILABLE,completed_epoch_100,0.9081,0.10324155156612397,97,results/paper_v9_signal_processing/03_five_seed/checkpoints/shuffled_gate/seed_20260909/variant_summary.json
+N-MNIST,ShuffledGate,20260909,UNAVAILABLE,validation_accuracy_max_tie_lower_loss,0.9077,0.10312743945121765,97,results/paper_v9_signal_processing/03_five_seed/checkpoints/shuffled_gate/seed_20260909/variant_summary.json

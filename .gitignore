@@ -1,0 +1,46 @@
+__pycache__/
+*.py[cod]
+*.log
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.idea/
+.vscode/
+.DS_Store
+node_modules/
+supplement/.qa_table_previews/
+*.inspect.ndjson
+
+# Datasets, caches, and trained states are intentionally external.
+data/**/*.npz
+data/**/*.npy
+data/**/*.h5
+data/**/*.hdf5
+checkpoints/
+outputs/
+**/checkpoints/
+*.pt
+*.pth
+*.ckpt
+
+# One hash-verified canonical checkpoint is intentionally published for smoke replay.
+!metadata/checkpoints/
+!metadata/checkpoints/nmnist_snn_dfa_seed_20260830_epoch_100_release.pt
+
+# Do not commit internal archives or manuscript/source-document metadata.
+*.zip
+*.tar
+*.tar.gz
+*.7z
+*.doc
+*.docx
+*.pdf
+*.aux
+*.bbl
+*.blg
+*.log
+
+# Local experiment scratch directories.
+results/**/logs/
+results/**/remote_replay_snapshot/
+results/**/work/
